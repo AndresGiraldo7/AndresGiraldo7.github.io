@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilos.css" type="text/css" <body id="body">
+<body id ="cuerpo">
+    <center>
+    <div class="container" id="contenedor">
+
+        <head>
+            <title>Hoja de vida | Andrés Giraldo.</title>
+
+        </head>
+        <table>
+            <tr>
+                <td>
+                    <h1 class="titulo" style="text-align:left"> HOJA DE VIDA</h1>
+                </td>
+                <td>
+                    <h>Seleccione un Color : </h5><select onchange="cambiarColor(this)">
+                            <option value="1">ORIGINAL (CadetBlue)</option>
+                            <option value="2">VERDE (DarkSeaGreen)</option>
+                            <option value="3">ROJO (Fire Opal)</option>
+                            <option value="4">AMARILLO (Golden Yellow)</option>
+                        </select>
+                </td>
+        </table>
+        <hr><br>
+        <nav>
+            <p>&nbsp;&nbsp;Menu de Navegacion:</p>
+            <a href="../PORTAFOLIO/InformacionPersonal.html">Informacion Personal</a> - 
+            <a  href="../PORTAFOLIO/ExperienciaLabor.html">Experiencia Laboral</a> -
+            <a  href="../PORTAFOLIO/RefFami.html">Referencias Familiares</a> -
+            <a  href="../PORTAFOLIO/RefPerso.html">Referencias Personales</a> -
+            <a  href="../PORTAFOLIO/Estudios.html">Estudios Realizados</a><br> 
+            <a href="../PORTAFOLIO/HojaDeVida.html">Ir a la pagina principal</a>
+        </nav>
+        <div id="informacion">
+            <h3 class="subtitulo">2. Experiencia laboral: </h3>
+            <br>
+            <p>Algunos Proyectos Son: </p>
+
+            <button class="accordion">Experiencia1 </button>
+            <div id="customers" class="panel">
+                <p> Proyecto PHP:Aplicación web para la gestión de Administradores, Docentes, Alumnos y materias
+                    perfecta
+                    para una institución educativa. Proyecto desarrollado en PHP y My SQL </p>
+            </div>
+            <button class="accordion">Experiencia 2</button>
+            <div class="panel">
+                <p>Planner Travel: Aplicación Móvil su funcion es dar una guía a los turistas para encontrar lugares
+                    representativos que potencialmente podrían visitar como restaurantes, Hoteles, Actividades para
+                    realizar, sitios más visitados en este caso para Colombia.Proyecto desarrollado en Android Studio,
+                    Java
+                    y Autenticación con Firebase.</p>
+            </div>
+
+            <button class="accordion">Experiencia 3</button>
+            <div class="panel">
+                <p>Marurity Control: Aplicación Web para ser usada por Supermercados o Empresas similares. La función
+                    principal es la captura de información del producto para su almacenamiento en base de datos mediante
+                    código de barras, posteriormente crear alertas/notificaciones que anticipen la caducidad del
+                    mismo.Proyecto Desarrollado con el Stack MEVN Mongodb, Express.Js, Vue.js, Node.js.</p>
+            </div>
+
+            <button class="accordion">Experiencia 4</button>
+            <div class="panel">
+                <p>Registro Tareas: Aplicacion Web para administrar pendientes o taras ver el porcentaje de desarrollo
+                    de la
+                    mismas registrar editar o eliminar una tarea o la descripcion de la misma. Proyecto desarrollado en
+                    Vue.js, Bootstrap5.</p>
+            </div>
+        </div>
+</center>
+</div>
+<script src=cambiarColor.js> </script>
+</body>
+
+</html>

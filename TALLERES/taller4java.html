@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Taller 4 Java</h1><br>
+        
+        <p class="parrafo">1. Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:
+            [0] = 55<br>
+            [1] = 99<br>
+            [2] = 11<br>
+            [3] = 56<br>
+            [4] = 69.<br></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.arreglos;
+
+
+public class App {
+    public static void main( String[] args ){
+       
+        Llenar arreg = new Llenar();
+        arreg.Completar();
+    }
+}
+<br><br>
+package com.taller.arreglos;
+import java.util.Scanner;
+
+public class Llenar {
+
+    Scanner input = new Scanner(System.in);
+    
+    public void Completar(){
+        int[] vector = new int[5];
+        for(int i =0; i < vector.length; i++){
+            System.out.println((i+1)+"- Digite numero para completar el vector.");
+            vector[i] = input.nextInt();
+        }
+        for (int i =0; i < vector.length; i++){
+            System.out.println("["+i+"] = "+vector[i]);
+        }
+    }
+}
+
+	
+        </p><br>
+        <a href="Talleres.html">Regresar</a>
+    </div>
+    
+
+    <div class="contenedor">
+        
+        <p class="parrafo">2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+            Números pares: 2, 4, 6, 8, 10<br>
+            Números impares: 1, 3, 5, 7, 9<br></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.arreglos;
+
+public class App {
+    public static void main( String[] args ){
+        ListaRan rand = new ListaRan();
+        rand.Mostrar();
+    }
+}<br><br>
+package com.taller.arreglos;
+
+public class ListaRan {
+
+
+    public void Mostrar(){
+        int[] arreglo = new int [20];
+        for(int i=0; i<arreglo.length; i++){
+            arreglo[i] = (int) Math.floor(Math.random() *(100 - 1)) + 1;
+        }
+        System.out.println("Números Impares: \n");
+        for (int i = 0; i < arreglo.length; i++){
+            if (arreglo[i] %2 != 0){
+                System.out.println(" "+arreglo[i]);
+            }
+        }
+        System.out.println("\n Numeros Pares:  \n");
+        for (int i = 0; i < arreglo.length; i++){
+            if (arreglo[i] %2 == 0){
+                System.out.println(" "+arreglo[i]);
+            }
+        }
+    }
+}
+
+	
+        </p><br><br>
+       <br> <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <p class="parrafo">3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.arreglos;
+
+public class App 
+{
+    public static void main( String[] args ){
+        NumeroP calcular = new NumeroP();
+        calcular.Mostrar();
+    }
+}<br><br>
+package com.taller.arreglos;
+
+public class NumeroP {
+    Boolean primo;
+    public void Mostrar(){
+        System.out.println("Son números primos del 1 al 1000:\n");
+        
+        for (int num = 2; num <= 1000; num++) {
+            primo = true;
+            for (int i = num - 1; i > 1; i--) {
+                if (num % i == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+            if (primo) {
+                System.out.println(num + " es primo.");
+            }
+        }
+    }
+}
+
+        </p><br>
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        <p class="parrafo">4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+            01 02 03 04 05<br>
+            06 07 08 09 10<br>
+            11 12 13 14 15<br>
+            16 17 18 19 20<br>
+            Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.<br>
+            01 02 03 04 05<br>
+            10 09 08 07 06<br>
+            11 12 13 14 15<br>
+            20 19 18 17 16<br></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.arreglos;
+
+public class App {
+    public static void main( String[] args ){
+        Matriz quemar = new Matriz();
+        quemar.Mostrar();
+    }
+}
+<br><br>
+package com.taller.arreglos;
+
+public class Matriz {
+    
+    static int[][] quemarMatriz = new int[4][5];
+ 
+    public void Mostrar(){
+        quemarMatriz[0][0] = 1;
+        quemarMatriz[0][1] = 2;
+        quemarMatriz[0][2] = 3;
+        quemarMatriz[0][3] = 4;
+        quemarMatriz[0][4] = 5;
+        quemarMatriz[1][0] = 6;
+        quemarMatriz[1][1] = 7;
+        quemarMatriz[1][2] = 8;
+        quemarMatriz[1][3] = 9;
+        quemarMatriz[1][4] = 10;
+        quemarMatriz[2][0] = 11;
+        quemarMatriz[2][1] = 12;
+        quemarMatriz[2][2] = 13;
+        quemarMatriz[2][3] = 14;
+        quemarMatriz[2][4] = 15;
+        quemarMatriz[3][0] = 16;
+        quemarMatriz[3][1] = 17;
+        quemarMatriz[3][2] = 18;
+        quemarMatriz[3][3] = 18;
+        quemarMatriz[3][4] = 20;
+
+        for (int fil = 0; fil < 4; fil++) {
+
+            if (fil % 2 != 0) {
+                for (int colum = 4; colum >= 0; colum--) {
+                    System.out.print((quemarMatriz[fil][colum] <= 9 ? "0" + quemarMatriz[fil][colum] : quemarMatriz[fil][colum]) + " ");
+                }
+            }
+            if (fil % 2 == 0) {
+                for (int colum = 0; colum < 5; colum++) {
+                    System.out.print((quemarMatriz[fil][colum] <= 9 ? "0" + quemarMatriz[fil][colum] : quemarMatriz[fil][colum]) + " ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+}
+
+	
+        </p><br>
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        <p class="parrafo">5. Se debe de imprimir el siguiente cuadro<br><br><a href="fotos/cuadro.png">Ver Cuadro</a></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.arreglos;
+
+
+public class App {
+    static int[][] matriz = new int[10][10];
+    
+    public static void main( String[] args ){
+       Matriz matriz = new Matriz();
+       matriz.Multiplicar();
+       matriz.Menu(matriz.matriz);
+    }
+}
+<br><br>
+package com.taller.arreglos;
+import java.util.Scanner;
+public class Matriz {
+    int[][] matriz = new int[10][10];
+    int fila, columna;
+    static Scanner num = new Scanner(System.in);
+    
+    public int[][] Multiplicar(){
+     
+        System.out.print("Columnas ");
+        for (int i = 0; i < 10; i++) {
+                System.out.print("|    " +i+"    |");
+        }
+        System.out.print("\nFilas");
+        System.out.println("");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (j == 0) {
+                    System.out.print("|   "+i+"   |");
+                }
+                matriz[i][j] = (i + 1) * (j + 1);
+                System.out.print("| " + (i < 9 ? "0" + (i + 1) + " x " : (i + 1) + " x ") + ((j < 9 ? "0" + (j + 1) : (j + 1))) + " |");
+            }
+            System.out.println("");
+        }
+        return matriz;  
+    }
+
+    public void Menu(int[][] matriz){
+        
+
+        System.out.print("\nDigite la fila que va a multiplicar: ");
+        fila = num.nextInt();
+        System.out.print("Digite la columna que va a multiplicar con la fila que selecciono: ");
+        columna = num.nextInt();
+
+        System.out.println("\nEl resultado de la multiplicacion es: "+matriz[fila][columna]+".");
+    }
+}
+	
+        </p><br>
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+
+</body>
+</html>

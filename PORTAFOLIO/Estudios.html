@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" type="text/css" />
+  
+
+<body id ="cuerpo">
+    <center> 
+    <div class="container" id="contenedor">
+    <head>
+        <title>Hoja de vida | Andrés Giraldo.</title>
+    </head>
+    <table >
+        <tr>  
+            <td><h1 class="titulo" style="text-align:left" > HOJA DE VIDA</h1></td>
+            <td><h>Seleccione un Color : </h5><select  onchange="cambiarColor(this)">
+                <option value="1">ORIGINAL (CadetBlue)</option>
+                <option value="2">VERDE (DarkSeaGreen)</option>
+                <option value="3" >ROJO (Fire Opal)</option>
+                <option value="4" >AMARILLO (Golden Yellow)</option>
+                </select>
+            </td>
+        </table>
+        <hr><br>
+        <nav>
+            <p>&nbsp;&nbsp;Menu de Navegacion:</p>
+            <a href="../PORTAFOLIO/InformacionPersonal.html">Informacion Personal</a> - 
+            <a  href="../PORTAFOLIO/ExperienciaLabor.html">Experiencia Laboral</a> -
+            <a  href="../PORTAFOLIO/RefFami.html">Referencias Familiares</a> -
+            <a  href="../PORTAFOLIO/RefPerso.html">Referencias Personales</a> -
+            <a  href="../PORTAFOLIO/Estudios.html">Estudios Realizados</a><br> 
+         <a href="../PORTAFOLIO/HojaDeVida.html">Ir a la pagina principal</a>
+        </nav>
+        <h3 class= "subtitulo">5. Estudios Realizados: </h3>
+       
+        <button class="accordion">Estudio1:</button>
+        <div class="panel">
+        <p>Institucion: Servicio Nacional De aprendezaje SENA <br>Profesion: Tecnologo en Analisis y desarrollo de Sistemas de Informacion</p>
+        </div>
+        <button class="accordion">Estudio2:</button>
+        <div class="panel">
+        <p>Institucion: Universidad tecnologica de pereira UTP <br>Diplomado Desarrollo de Aplicaciones Web.</p>
+        </div>
+        <br>
+    </center>
+</div>
+<script src = cambiarColor.js> </script>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Taller 2 PSeInt</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Taller 2 PSeInt</h1><br>
+		<a href="https://www.youtube.com/watch?v=zTOXJfgHHnk&t=8s">Ver Video</a>
+        <p class="parrafo">1. Realizar un programa el cual solicite su nombre y apellidos.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio1<br><br>
+	
+            Definir edad Como Entero;<br><br>
+	
+	Escribir "¿Cual es su edad?";<br>
+	Leer edad;<br><br>
+	
+	Si edad >= 18 Entonces<br>
+		Escribir "Usted es mayor de edad.";<br>
+	FinSi<br><br>
+
+        
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+    <div class="contenedor">
+        <p class="parrafo">2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio2<br><br>
+            Definir edad Como Entero;<br><br>
+	
+            Escribir "¿Cual es su edad?";<br>
+            Leer edad;<br><br>
+            
+            Si edad <= 18 Entonces<br>
+                Escribir "Usted aún es un niño(a).";<br>
+            FinSi<br><br>
+        
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+    <div class="contenedor">
+        <p class="parrafo">3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio3<br><br>
+        	Definir nombres Como Caracter;<br>
+	        Definir apellidos Como Caracter;<br>
+	        Definir edad Como Entero;<br>
+	
+	        Escribir "¿Cual es su nombre?";<br><br>
+	        Leer nombres;<br>
+	
+	        Escribir "¿Cuales son sus apellidos?";<br><br>
+	            Leer apellidos;<br><br>
+	
+	        Escribir "¿Cual es su edad?";<br>
+	        Leer edad;<br><br>
+	
+	        Si edad >= 18 Entonces<br>
+		        Escribir nombres, " ", apellidos, " usted es mayor de edad por lo tanto puede ingresar a la fiesta.";<br><br>
+	        SiNo<br>
+		        Escribir nombres, " ", apellidos, " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";<br>
+	        FinSi<br><br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        <p class="parrafo">4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio4<br><br>
+        
+	Definir usuario Como Caracter;<br>
+	Definir opcion Como Entero;<br>
+	Definir buscarPelicula Como Caracter;<br>
+	Definir eleccion Como Entero;<br>
+	Definir pelicula1, pelicula2, pelicula3 Como Caracter;<br><br>
+	
+	pelicula1<- "MADAGASCAR";<br>
+	pelicula2<- "TIBURON";<br>
+	pelicula3<- "DUMBO";<br><br>
+	
+	Escribir "¿Cual es tu nombre de usuario?";<br>
+	Leer usuario;<br>
+	Limpiar Pantalla;<br>
+	Escribir "Elije una opcion ", usuario;<br>
+	Escribir "1. Bienvenida usuario";<br>
+	Escribir "2. Peliculas disponibles";<br>
+	Escribir "3. Alquiler y recibo de pelicula";<br><br>
+	
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer<br>
+			1:<br>
+				Escribir "Bienvenido a la tienda de alquiler de peliculas del barrio el Porvenir " , usuario;<br>
+			2:<br>
+				Escribir "¿Cual pelicula estas buscando?";<br>
+				Leer buscarPelicula;<br>
+				Si (buscarPelicula = pelicula1) o (buscarPelicula = pelicula2) o (buscarPelicula = pelicula3) Entonces<br>
+					Escribir usuario, " Haz alquilado la pelicula ", buscarPelicula, " Disfrutala";<br>
+				SiNo<br>
+					Escribir "Para consultar la disponibilidad de peliculas debes ir al paso 3";<br>
+				FinSi<br>
+			3: <br><br>
+				
+				Escribir "Las peliculas disponibles son:";<br><br>
+				
+					Escribir "1. ", pelicula1, " El costo del alquiler es de $5000";<br>
+					Escribir "2. ", pelicula2, " El costo del alquiler es de $6000";<br>
+					Escribir "3. ", pelicula3, " El costo del alquiler es de $7000";<br>
+					Leer eleccion;<br>
+					Limpiar Pantalla;<br>					
+					Segun eleccion Hacer<br>
+						
+						1: <br>
+							Escribir "Has alquilado y recibido la pelicula ", pelicula1;<br>
+						2: <br>
+							Escribir "Has alquilado y recibido la pelicula ", pelicula2;<br>
+						3:<br>
+							Escribir "Has alquilado y recibido la pelicula ", pelicula3;<br><br>
+							
+					FinSegun<br>
+
+	FinSegun<br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+    <div class="contenedor">
+        <p class="parrafo">5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio5<br><br>
+        	Definir cliente Como Caracter;<br>
+	Definir producto1, producto2, producto3 Como Caracter;<br>
+	Definir caracteristica1, caracteristica2, caracteristica3 Como Caracter;<br>
+	Definir precio1, precio2, precio3 Como Real;<br>
+	Definir venta Como Entero;<br>
+	Definir opcion Como Entero;<br><br>
+	
+	producto1<-"medicamento1";<br>
+	producto2<-"medicamento2";<br>
+	producto3<-"medicamento3";<br><br>
+	
+	caracteristica1<-"Para el Dolor";<br>
+	caracteristica2<-"Para la Inflamacion";<br>
+	caracteristica3<-"Para la Gripa";<br><br>
+	
+	precio1<- 8500;<br>
+	precio2<- 5000;<br>
+	precio3<- 12000;<br><br>
+	
+	Escribir "*** Bienvenido a la Drogueria Mi Salud ***";<br>
+	Escribir "Por favor dijite su nombre:";<br>
+	Leer cliente;<br>
+	Escribir "Elejir opcion";<br>
+	Escribir "1. Comprar Producto ";<br>
+	Escribir "2. Ver Caracteristicas y precios de los productos";<br>
+	Escribir "3. Devoluciones";<br>
+	Leer opcion;<br><br>
+	
+	Segun opcion Hacer<br><br>
+		
+		1: <br>
+			Escribir "Descripcion de productos";<br>
+			Escribir "1. ", producto1, " ",caracteristica1, " Tiene un costo de ", precio1 ," Pesos";<br>
+			Escribir "2. ", producto2, " ",caracteristica2, " Tiene un costo de ", precio2 ," Pesos";<br>
+			Escribir "3. ", producto3, " ",caracteristica3, " Tiene un costo de ", precio3 ," Pesos";<br><br>
+			
+			Leer opcion;<br>
+			Limpiar Pantalla;<br><br>
+			
+			Si opcion= 1 Entonces<br>
+				Escribir  producto1;<br><br>
+				Escribir "Descripcion del producto ", producto1;<br>
+				Escribir "Caracteristicas del producto ", caracteristica1;<br>
+				Escribir "Tiene un costo de: ", precio1, " pesos";<br>
+			Finsi<br><br>
+				
+			Si opcion = 2 Entonces<br>
+				Escribir producto2;<br>
+				Escribir "Descripcion del producto ", producto2;<br>
+				Escribir "Caracteristicas del producto ", caracteristica2;<br>
+				Escribir "Tiene un costo de: ", precio2, " pesos";<br>
+			Finsi<br><br>
+			
+			Si opcion = 3 Entonces<br>
+				Escribir producto3;<br>
+				Escribir "Descripcion del producto ", producto3;<br>
+				Escribir "Caracteristicas del producto ", caracteristica3;<br>
+				Escribir "Tiene un costo de: ", precio3, " pesos";<br>
+			FinSi<br><br>
+			
+			Escribir "Elejir opcion";<br>
+			Escribir "Elija una opcion de pago";<br>
+			Escribir "1. Pago en efectivo";<br>
+			Escribir "2. Pago con tarjeta";<br>
+			Escribir "3. Pago con bono sodexo";<br>
+			Leer opcion;<br><br>
+			
+			Escribir "*** Para confirmar la compra por favor digite nuevamente el numero del medicamento ***";<br>
+			Leer venta;<br><br>
+			
+			Limpiar Pantalla;	<br><br>	
+			
+			Si venta = 1 Entonces<br>
+				Escribir "Factura emitida al Cliente: " ,cliente;<br>
+				Escribir "Descripcion del producto ", producto1;<br>
+				Escribir "Caracteristicas del producto ", caracteristica1;<br>
+				Escribir "Tiene un costo de: ", precio1, " pesos";<br>
+				Escribir "Gracias por su compra!!";<br><br>
+			
+			FinSi<br>
+			
+			Si venta = 2 Entonces<br>
+				Escribir "Factura emitida al Cliente: " ,cliente;<br>
+				Escribir "Descripcion del producto ", producto2;<br>
+				Escribir "Caracteristicas del producto ", caracteristica2;<br>
+				Escribir "Tiene un costo de: ", precio2, " pesos";<br>
+				Escribir "Gracias por su compra!!";<br><br>
+		
+			FinSi<br>
+			
+			Si venta = 3 Entonces<br>
+				Escribir "Factura emitida al Cliente: " ,cliente;<br>
+				Escribir "Descripcion del producto ", producto3;<br>
+				Escribir "Caracteristicas del producto ", caracteristica3;<br>
+				Escribir "Tiene un costo de: ", precio3, " pesos";<br>
+				Escribir "Gracias por su compra!!";<br>
+			FinSi<br>
+		2:<br>
+			Escribir "Descripcion de productos";<br>
+			Escribir "1. ", producto1, " ",caracteristica1, " Tiene un costo de ", precio1 ," Pesos";<br>
+			Escribir "2. ", producto2, " ",caracteristica2, " Tiene un costo de ", precio2 ," Pesos";<br>
+			Escribir "3. ", producto3, " ",caracteristica3, " Tiene un costo de ", precio3 ," Pesos";<br><br>
+			
+			
+		3: <br>
+			Escribir "Seccion Devoluciones";<br>
+			Escribir "*** Para confirmar la devolucion del producto por favor digite nuevamente el numero del medicamento ***";<br>
+			Escribir "1. ",producto1;<br>
+			Escribir "2. ",producto2;<br>
+			Escribir "3. ",producto3;<br>
+			Leer opcion;<br>
+			<br>
+			Limpiar Pantalla;<br>
+			
+			Si opcion = 1 Entonces<br>
+				Escribir "Devoluvion confirmada para el producto ", producto1 ," y reembolso realizado.";<br>
+			FinSi<br>
+			Si opcion = 2 Entonces<br>
+				Escribir "Devoluvion confirmada para el producto ", producto2 ," y reembolso realizado.";<br>
+			FinSi<br>
+			Si opcion = 3 Entonces<br>
+				Escribir "Devoluvion confirmada para el producto ", producto3 ," y reembolso realizado.";<br>
+			FinSi<br>
+	FinSegun<br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+    <div class="contenedor">
+        <p class="parrafo">6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio6<br><br>
+        	Definir cliente Como Caracter;<br>
+	Definir mecanico Como Caracter;<br>
+	Definir servicio1, servicio2, servicio3 Como Caracter;<br>
+	Definir opcion Como Entero;<br>
+	Definir moto Como Caracter;<br>
+	Definir observacion Como Caracter;<br>
+	Definir arreglo Como Caracter;<br>
+	Definir salida Como Caracter;<br>
+	mecanico<-"Rafael";<br>
+	
+	
+	servicio1<-"Mantenimiento General de Motocicleta";<br>
+	servicio2<-"Mantenimiento Periodico de Motocicleta";<br>
+	servicio3<-"Lavado de motocicleta";<br>
+	
+	Escribir "*** Bienvenido a El Maquinista taller de motos ***";<br>
+	Escribir "Digite su nombre por favor:";<br>
+	Leer cliente;<br>
+	Escribir "Digite la placa de su moto";<br>
+	Leer moto;<br>
+	Escribir "Elija una opcion";<br>
+	Escribir "1. Registrar servicio para motocicleta";<br>
+	Escribir "2. Observaciones por parte del cliente";<br>
+	Escribir "3. Registro de salida de motocicleta";<br>
+	Escribir "4. Inventario de cambios por parte del mecanico";<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer<br>
+		1: <br>
+			Escribir "Elija un servicio para su motocicleta:";<br>
+			Escribir "1. ", servicio1;<br>
+			Escribir "2. ", servicio2;<br>
+			Escribir "3. ", servicio3;<br>
+			Leer opcion;<br>
+			Si opcion = 1 Entonces <br>
+				Escribir "El servicio de ", servicio1, " quedo registrado exitosamente para el cliente: ", cliente, " Propietario de la moto con placas:", moto; <br>
+			FinSi<br>
+			Si opcion = 2 Entonces<br>
+				Escribir "El servicio de ", servicio2, " quedo registrado exitosamente para el cliente: ", cliente, " Propietario de la moto con placas:", moto; <br>
+			FinSi<br>
+			Si opcion = 3 Entonces<br>
+				Escribir "El servicio de ", servicio3, " quedo registrado exitosamente para el cliente: ", cliente, " Propietario de la moto con placas:", moto; <br>
+			FinSi<br>
+			
+		2: <br>
+			Escribir "Por favor escriba las observaciones que desea realizar:";<br>
+			Leer observacion;<br>
+			Limpiar Pantalla;<br>
+			Escribir "Observacion Guardada.";<br>
+			
+		3:	<br>
+			Escribir "Digite la fecha de salida del taller:";<br>
+			Leer salida;<br>
+			Escribir "La moto de placas " ,moto, " fue retirada en la fecha: ", salida;<br>
+			
+		4:<br>
+			Escribir "Por favor escriba los cambios o arreglos que se deben realizar a la motocicleta:";<br>
+			Leer arreglo;<br>
+			Limpiar Pantalla;<br>
+			Escribir "Inventario realizado por el mecanico ", mecanico, " Guardado.";<br>
+	FinSegun<br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+    <div class="contenedor">
+        <p class="parrafo">7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio7<br><br>
+        	Definir usuario Como Caracter;<br>
+	Definir peso Como Real;<br>
+	Definir estatura Como Real;<br>
+	Definir imc Como Real;<br><br>
+
+	Escribir "*** Bienvenido a  La Secretaria de Salud Municipal ***";<br>
+	Escribir "Sistema Para calcula tu indice de masa corporal";<br>
+	Escribir "Digita tu nombre";<br>
+	Leer usuario;<br>
+	Escribir "Cual es tu peso en Kilogramos";<br>
+	Leer peso;<br>
+	Escribir  "Cual es tu estatura en Metros, por ejemplo 1.75";<br>
+	Leer estatura;<br>
+	Limpiar Pantalla;<br>
+	imc <- peso/(estatura^ 2);<br>
+	Escribir "Tu indice de masa corporal " ,usuario, " es:", imc;<br><br>
+
+	Si imc < 18.5 Entonces<br>
+		Escribir "Tines un Peso Bajo";<br>
+	FinSi<br>
+	Si imc >=18.5 Entonces<br>
+		Escribir "Tines un Peso Bueno";<br>
+	FinSi<br>
+	Si imc >= 25 Entonces<br>
+		Escribir "Tines un Peso Sobrepeso";<br>
+	FinSi<br>
+	Si imc >= 35 Entonces<br>
+		Escribir "Tines un Peso Obesidad";<br>
+	FinSi<br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        <p class="parrafo">8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio8<br><br>
+            Definir pastelero Como Caracter;<br>
+            Definir torta1, torta2, torta3 Como Caracter;<br>
+            Definir sabor1, sabor2, sabor3 Como Caracter;<br>
+            Definir cantidad1, cantidad2, cantidad3 Como Caracter;<br>
+            Definir decorado1, decorado2 Como Caracter;<br>
+            Definir opcion Como Entero;<br>
+            pastelero<-"Don Carlos";<br><br>
+            
+            torta1<-"Torta para Cumpleaños";<br>
+            torta2<-"Torta para Matrimonios";<br>
+            torta3<-"Torta para 15 años";<br><br>
+            
+            sabor1<- "Chocolate";<br>
+            sabor2<- "Tresleches";<br>
+            sabor3<- "Vainilla";<br><br>
+            
+            cantidad1<- "6 porciones";<br>
+            cantidad2<- "12 porciones";<br>
+            cantidad3<- "18 porciones";<br><br>
+            
+            decorado1 <- "Decorada";<br>
+            decorado2 <- "No decorada";<br>
+            Escribir "Registro de pedidos";<br>
+            Escribir "Elija una opcion";<br>
+            Escribir "1. Registrar Pedido";<br>
+            Escribir "2. Tortas Disponibles";<br>
+            Escribir "3. Tortas vendidas";<br>
+            Leer opcion;<br>
+            Limpiar Pantalla;<br>
+            Segun opcion Hacer<br>
+                1: <br>
+                    Escribir "Registrar producto";<br>
+                    Escribir "1. " ,torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+                    Escribir "2. " ,torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+                    Escribir "3. " ,torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+                    Leer opcion;<br><br>
+                    
+                    Si opcion = 1 Entonces<br>
+                        Escribir "Se registro ",torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+                    FinSi<br><br>
+                    
+                    Si opcion = 2 Entonces<br>
+                        Escribir "Se registro ",torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+                    FinSi<br><br>
+                    
+                    si opcion = 3 Entonces<br>
+                        
+                        Escribir "Se registro " ,torta3," ", sabor3 ," ", cantidad3," ",decorado3;<br>
+                    FinSi<br>
+                    
+                2:<br>
+                    Escribir "Las tortas Disponibles son:";<br>
+                    Escribir torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+                    Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+                    Escribir torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+                    <br>
+                3:<br>
+                    Escribir "Las tortas vendidas son: ";<br>
+                    Escribir torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+                    Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+                    Escribir torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+                    Escribir torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+                    Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+                    Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado1;<br>
+                    Escribir torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+            FinSegun<br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        <p class="parrafo">9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso Ejercicio9<br><br>
+        
+	Definir opcion Como Entero;<br>
+	Definir alturaRectangulo Como Real;<br>
+	Definir baseRectangulo Como Real;<br>
+	Definir lado1 Como Real;<br>
+	Definir lado2 Como Real;<br>
+	Definir lado3 Como Real;<br>
+	Definir lado4 Como Real;<br>
+	Definir lado5 Como Real;<br>
+	
+	Escribir "*** Aplicacion para calcular area a rectangulo, tríangulo o trapecio ***";<br>
+	Escribir "Elija una opcion: ";<br>
+	Escribir "1. Calcular el area a un rectangulo";<br>
+	Escribir "2. Calcular el area a un tríangulo";<br>
+	Escribir "3. Calcular el area a un trapecio";<br>
+	Leer opcion;<br>
+	<br>
+	Segun opcion Hacer<br>
+		1:<br>
+			Escribir "Calcular area de un rectangulo";<br>
+			Escribir "Escriba cuanto mide la eltura del rectangulo";<br>
+			Leer alturaRectangulo;<br>
+			Escribir "Escriba cuanto mide la base del rectangulo";<br>
+			Leer baseRectangulo;<br>
+			Escribir "El area del rectangulo es: " , baseRectangulo*alturaRectangulo;<br>
+			
+		2:<br>
+			Escribir "Calcular area de un tríangulo";<br>
+			Escribir "Escriba cuanto mide altura del triangulo";<br>
+			Leer lado1;<br>
+			Escribir "Escriba cuanto mide la base del triangulo";<br>
+			Leer lado2;<br>
+			Escribir "El area del Tríangulo es: ", (lado1*lado2)/2;<br>
+		3:<br>
+			Escribir "Calcular area de un trapecio";<br>
+			Escribir "Escriba cuanto mide el lado superior";<br>
+			Leer lado3;<br>
+			Escribir "Escriba cuanto mide el lado inferior";<br>
+			Leer lado4;<br>
+			Escribir "Escriba cuanto mide h";<br>
+			Leer lado5;<br>
+			Escribir "El area del Trapecio es: " ,((lado3 + lado4 )*lado5)/2;<br>
+	FinSegun	<br>
+	        FinSi<br><br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        <p class="parrafo">10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+        <p class="parrafo">Solucion:</p><br>
+        <p class="parrafo">Proceso Ejercicio10<br><br>
+        	Definir titular Como Caracter;<br>
+	Definir cantidad Como Real;<br>
+	Definir opcion Como Entero;<br>
+	Definir cantidadC Como Real;<br>
+	<br>
+	cantidadC<-800000;<br><br>
+	
+	Escribir '*** Bienvenido a Su banco fiel ***';<br>
+	Escribir '¿Cual es el nombre del titular de la cuenta?';<br>
+	Leer titular;<br><br>
+	
+	
+	Escribir 'Elija una opcion: ';<br>
+	Escribir '1. Realizar ingreso';<br>
+	Escribir '2. Realizar retiro';<br>
+	Escribir '3. Consultar el valor';<br>
+	Leer opcion;<br>
+	<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer <br>
+    <br>
+		1:<br>
+			Escribir 'Bienvenido a la seccion de ingresos ',titular;<br>
+			Escribir '¿Cual es la cantidad de dinero que desea ingresar?';<br>
+			Leer cantidad;<br>
+			Limpiar Pantalla;<br>
+			Si cantidad <= 0 Entonces<br>
+				Escribir 'Digite una cantidad positiva';	<br>
+			Sino<br>
+				Escribir 'Ha realizado la el ingreso de ', cantidad , ' pesos', ' gracias por usar nuestros servicios';<br>
+			FinSi<br>
+			
+		2:<br>
+			Escribir 'Bienvenido a la seccion de retiros ',titular;<br>
+			Escribir '¿Cual es la cantidad de dinero que desea retirar?';<br>
+			Leer cantidad;<br>
+			Limpiar Pantalla;<br>
+			Si cantidad <= cantidadC Entonces<br>
+				Escribir 'Ha realizado la el retiro de ', cantidad , ' pesos', ' gracias por usar nuestros servicios';<br>
+			Sino <br>
+				Escribir 'Saldo insuficiente';<br>
+			FinSi<br>
+			
+		3:<br>
+			Escribir 'Elije una opcion';<br>
+			Escribir '1. Consultar el costo del ingreso';<br>
+			Escribir '2. Consultar el costo del retiro';<br>
+			Leer opcion;<br>
+			Segun opcion Hacer<br>
+				1:<br>
+					Escribir titular, ' El costo del ingreso es de 0 pesos';<br>
+					
+				2:<br>
+					Escribir titular, ' El costo del retiro es de 4000 pesos';<br>
+					<br>
+			FinSegun	<br>
+	FinSegun<br>
+        FinProceso<br>
+        </p><br>
+        <a href="pseint.html">Regresar</a>
+    </div>
+</body>
+</html>

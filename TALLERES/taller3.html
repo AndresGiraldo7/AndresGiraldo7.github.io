@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Taller 3 PSeInt</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Taller 3 PSeInt</h1>
+      <a href="https://www.youtube.com/watch?v=M_Bu9l6zHlE">Ver Video</a>
+      <br />
+      <p class="parrafo">
+        1.Realizar la siguiente figura por medio del ciclo Para <br /><br />
+        <a href="fotos/figura1.png">Ver figura</a>
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio1<br /><br />
+
+        Definir x,n,j Como Entero;<br /><br />
+
+        Escribir"Digita un numero 10 y pulsa enter";<br />
+        Leer n;<br />
+        x<-10;<br />
+        j<-10;<br /><br />
+
+        Para x<-n Hasta 1 con Paso -1 Hacer<br />
+        Para j <- 0 Hasta (n - x - 1) Hacer<br />
+        Escribir "*" Sin Saltar;<br />
+        FinPara<br />
+        Escribir "";<br />
+        FinPara<br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        2.Realizar la siguiente figura por medio del ciclo Mientras - Hacer
+        <br /><br />
+        <a href="fotos/Figura2.png">Ver figura</a>
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio2<br /><br />
+
+        Definir f,c,i Como Entero;<br />
+
+        f <- 1;<br />
+        i <- 10;<br />
+        Mientras f <= 10 Hacer<br />
+        c <- 1;<br />
+        Mientras c <= 10 Hacer<br />
+        Si c = i Entonces<br />
+        Escribir "*" Sin Saltar;<br />
+        i<-i-1;<br />
+        SiNo<br />
+        Si c >i Entonces<br />
+        Escribir "*" Sin Saltar;<br />
+        SiNo<br />
+        Escribir " "Sin Saltar;<br />
+        FinSi<br />
+        FinSi<br />
+        c<-c+1;<br />
+        FinMientras<br />
+        Escribir"";<br />
+        f<-f +1;<br />
+        FinMientras<br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que
+        <br /><br />
+        <a href="fotos/Figura3.png">Ver figura</a>
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio3<br /><br />
+
+        Definir a,b,c,x Como Entero;<br />
+        x<-10;<br />
+        Para a <- x Hasta 1 Con Paso -1 Hacer<br />
+        Para b<-1 Hasta a Con Paso 1 Hacer<br />
+        Escribir " " Sin Saltar;<br />
+        FinPara<br />
+        Para c<-a Hasta x Con Paso 1 Hacer<br />
+        Escribir "* " Sin Saltar;<br />
+        FinPara<br />
+        Escribir "";<br />
+        FinPara<br />
+        Escribir" * * * ";<br />
+        Escribir" * * * ";<br />
+        Escribir" * * * * * ";<br />
+        Escribir" * * * * * * * ";<br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        4.Se requiere un programa que pueda crear la tabla de multiplicar del
+        número que el usuario indique por medio del ciclo Para; esta debe ser
+        impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la
+        tabla del 5, entonces el resultado debería ser el siguiente:
+        <br /><br />
+        <a href="fotos/Figura4.png">Ver Tabla</a>
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <br />
+      <p class="parrafo">
+        Proceso Ejercicio4<br /><br />
+
+        Definir multi, num como Entero;<br />
+        Escribir "Digite un número del 1 - 12 : ";<br />
+        Leer num;<br />
+        Para multi <-1 Hasta 12 Con Paso 1 Hacer<br />
+        Escribir num, " X ", multi, " = ", (num * multi);<br />
+        FinPara<br /><br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        5. Utilizando el ciclo que usted desee, crear un menú de ejecución
+        infinita hasta que el usuario desee terminar dicho ciclo. <br /><br />
+        <a href="fotos/Figura5.png">Ver Menu</a>
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio5<br /><br />
+
+        Definir persona Como Caracter;<br />
+        Definir n Como Logico;<br />
+        Definir i Como Entero;<br />
+        n <- Falso;<br />
+        i <- 1;<br />
+        //1. Capturar nombre<br />
+        Escribir "¿1. Cual es su nombre:?";<br />
+        Leer persona; <br />
+        Repetir <br />
+        //2. Saludar Persona<br />
+        Escribir i, "*** Saludo Infinito ***";<br />
+        Escribir "2. Hola " , persona, ", te voy a saludar cada vez que
+        presiones un enter.";<br />
+        //3. Salir del Sistema<br />
+        Escribir "3 . Escriba ( Verdadero ) Si ya no quieres que te saluden
+        más.";<br />
+        Leer n;<br />
+        i<-i +1; <br />
+        Hasta Que n = Verdadero<br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        6.Se está creando una aplicación que va a estar conectada con un
+        prototipo que permita almacenar contactos telefónicos en el dispositivo.
+        Para ello cada contacto debe contener nombre completo, teléfono y
+        organización. Se requiere que la aplicación permita añadir 3 contactos
+        verificando que el número no esté almacenado, buscar contactos
+        almacenados y eliminar contactos si el usuario lo requiere. Recuerde que
+        el sistema debe terminar cuando el usuario así lo indique.
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio6<br /><br />
+
+        Definir nombre Como Caracter;<br />
+        Definir nom1, nom2,nom3 Como Caracter;<br />
+        Definir org Como Caracter;<br />
+        Definir org1, org2, org3 Como Caracter;<br />
+        Definir tel Como Entero;<br />
+        Definir num1, num2, num3 Como Real;<br />
+        Definir opcion Como Entero;<br /><br />
+
+        num1<- 310;<br />
+        num2<- 300;<br />
+        num3<- 301;<br />
+        <br />
+        org1<- "Tigo";<br />
+        org2<- "Claro";<br />
+        org3<- "ETB";<br />
+        <br />
+        nom1<- "Pedro";<br />
+        nom2<- "Pablo";<br />
+        nom3<- "Juan";<br />
+        <br />
+        Repetir<br />
+        Escribir "*** Administracion de contactos ***";<br />
+        Escribir "1. Añadir contacto";<br />
+        Escribir "2. Buscar Contacto";<br />
+        Escribir "3. Eliminar Contacto";<br />
+        Leer opcion;<br />
+        Limpiar pantalla;<br />
+        <br />
+        Segun opcion Hacer<br /><br />
+
+        1:<br />
+        Escribir "Digite el numero de contacto que desea añadir";<br />
+        Leer tel;<br />
+        Si (tel = num1) o (tel = num2) o (tel = num3) Entonces<br />
+        Escribir "El numeto de contacto ya exite";<br />
+        SiNo<br />
+        Escribir "Digite el nombre completo";<br />
+        Leer nombre;<br />
+        Escribir "Digite la Organizacion";<br />
+        Leer org;<br />
+        Escribir "El numero de contacto se ha añadido correctamente";<br />
+        Escribir "";<br />
+        FinSi <br /><br />
+        2: Escribir "*** Busqueda de Contacto ***";<br />
+        Escribir "Digite el numero de contacto que desea buscar";<br />
+        Leer tel;<br />
+        Si tel = num1 Entonces<br />
+        Escribir "Contacto: ", nom1;<br />
+        Escribir "Organizacion: ", org1;<br />
+        Escribir "Telefono: ", num1;<br />
+        Escribir "";<br />
+        SiNo<br />
+        Escribir "Telefono no registrado";<br />
+        FinSi<br />
+        Si tel = num2 Entonces<br />
+        Escribir "Contacto: ", nom2;<br />
+        Escribir "Organizacion: ", org2;<br />
+        Escribir "Telefono: ", num2;<br />
+        Escribir "";<br />
+        FinSi<br />
+        Si tel = num3 Entonces<br />
+        Escribir "Contacto: ", nom3;<br />
+        Escribir "Organizacion: ", org3;<br />
+        Escribir "Telefono: ", num3; Escribir "";<br />
+        FinSi<br />
+        <br />
+        3:<br />
+        Escribir "*** Eliminar Contacto ***";<br />
+        Escribir "Digite el numero de contacto que desea eliminar";<br />
+        Leer tel;<br />
+        Si tel = num1 Entonces<br />
+        Escribir "Contacto: ", nom1;<br />
+        Escribir "Organizacion: ", org1;<br />
+        Escribir "Telefono: ", num1;<br />
+        Escribir "Contacto eliminado";<br />
+        Escribir "";<br />
+        SiNo<br />
+        Escribir "Telefono no registrado";<br />
+        FinSi<br />
+
+        Si tel = num2 Entonces<br />
+        Escribir "Contacto: ", nom2;<br />
+        Escribir "Organizacion: ", org2;<br />
+        Escribir "Telefono: ", num2;<br />
+        Escribir "Contacto eliminado";<br />
+        Escribir "";<br />
+        FinSi<br />
+
+        Si tel = num3 Entonces<br />
+        Escribir "Contacto: ", nom3;<br />
+        Escribir "Organizacion: ", org3;<br />
+        Escribir "Telefono: ", num3;<br />
+        Escribir "Contacto eliminado";<br />
+        Escribir "";<br />
+        FinSi<br />
+        FinSegun<br />
+        Hasta que opcion <> 1 y opcion <> 2 y opcion <> 3;<br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        7. Realizar la siguiente figura por medio del ciclo Para
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio7<br /><br />
+        Definir placa1, placa2, placa3, placa4, placa5 Como Caracter;<br />
+        Definir placa Como Caracter;<br />
+        Definir marca1, marca2, marca3 Como Caracter;<br />
+        Definir marca Como Caracter;<br />
+        Definir nom1, nom2, nom3, nom4, nom5 Como Caracter;<br />
+        Definir nombre Como Caracter;<br />
+        Definir tel1, tel2, tel3, tel4, tel5 Como Real;<br />
+        Definir opcion Como Entero;<br /><br />
+
+        placa1<-"ovl598";<br />
+        placa2<-"asd585";<br />
+        placa3<-"rdf872";<br />
+        placa4<-"jld951";<br />
+        placa5<-"hfs879";<br />
+        <br />
+        marca1<-"Toyota";<br />
+        marca2<-"Ford";<br />
+        marca3<-"Chevrolet";<br />
+        <br />
+        nom1<- "Juan";<br />
+        nom2<- "Pedro";<br />
+        nom3<- "Laura";<br />
+        nom4<- "Pablo";<br />
+        nom5<- "Maria";<br />
+        <br />
+        tel1<-254687;<br />
+        tel2<-846877;<br />
+        tel3<-787984;<br />
+        tel4<-313548;<br />
+        tel5<-778565;<br />
+        <br />
+        Repetir<br />
+        Escribir "*** Parqueadero el guardian ***";<br />
+        Escribir "1. Ingresar vehiculo";<br />
+        Escribir "2. Retirar vehiculo";<br />
+        Escribir "3. Consultar vehiculo";<br />
+        Escribir "Si desea salir del sistema oprima 4";<br />
+        Leer opcion;<br />
+        Limpiar Pantalla;<br />
+        Segun opcion Hacer<br />
+        1:<br />
+        Escribir "Digite la placa del vehiculo para el registro: ";<br />
+        Leer placa;<br />
+        Si (placa = placa1) o (placa= placa2) o (placa= placa3) o ( placa =
+        placa4) o (placa = placa5) Entonces<br />
+        <br />
+        Escribir "El vehiculo ya esta registrado";<br />
+        Sino<br />
+        Escribir "Nombre Completo";<br />
+        Leer nombre;<br />
+        Escribir "Marca del vehiculo";<br />
+        Leer marca;<br />
+        Limpiar Pantalla;<br />
+        Escribir "Se han guardado sus datos para el registro.";<br />
+        Escribir "";<br />
+        Escribir "Lo sentimos cupo del parqueadero lleno.";<br />
+        FinSi <br />
+        2:<br />
+        Escribir "Digite la placa del vehiculo para el retiro: ";<br />
+        Leer placa;<br />
+        Si (placa = placa1) Entonces<br />
+        Escribir "Vehiculo con placas ", placa1, " Marca " , marca1, " propiedad
+        de: ", nom1, " Telefono ", tel1, ".";<br />
+        Escribir "Retirado Exitosamente";<br />
+        FinSi<br />
+        Si (placa= placa2) Entonces <br />
+        Escribir "Vehiculo con placas ", placa2, " Marca " , marca2, " propiedad
+        de: ", nom2, " Telefono ", tel2, ".";<br />
+        Escribir "Retirado Exitosamente";<br />
+        Finsi<br />
+        Si (placa= placa3) Entonces<br />
+        Escribir "Vehiculo con placas ", placa3, " Marca " , marca1, " propiedad
+        de: ", nom3, " Telefono ", tel3, ".";<br />
+        Escribir "Retirado Exitosamente";<br />
+        Finsi<br />
+        Si ( placa = placa4) Entonces<br />
+        Escribir "Vehiculo con placas ", placa4, " Marca " , marca3, " propiedad
+        de: ", nom4, " Telefono ", tel4, ".";<br />
+        Escribir "Retirado Exitosamente";<br />
+        FinSi<br />
+        Si(placa = placa5) Entonces<br />
+        Escribir "Vehiculo con placas ", placa5, " Marca " , marca2, " propiedad
+        de: ", nom5, " Telefono ", tel5, ".";<br />
+        Escribir "Retirado Exitosamente";<br />
+        FinSi<br />
+        <br />
+        3: <br />
+        Escribir "Digite la placa del vehiculo que desea consultar ";<br />
+        Leer placa;<br />
+        Si (placa = placa1) Entonces<br />
+        Escribir "Vehiculo con placas ", placa1, " Marca " , marca1, " propiedad
+        de: ", nom1," Telefono ", tel1,".";<br />
+        Sino<br />
+        Escribir "Vehiculo no esta registrado";<br />
+        FinSi<br />
+        Si (placa= placa2) Entonces <br />
+        Escribir "Vehiculo con placas ", placa2, " Marca " , marca2, " propiedad
+        de: ", nom2," Telefono ", tel2,".";<br />
+        Finsi<br />
+        Si (placa= placa3) Entonces<br />
+        Escribir "Vehiculo con placas ", placa3, " Marca " , marca1, " propiedad
+        de: ", nom3," Telefono ", tel3,"."; <br />
+        Finsi<br />
+        Si ( placa = placa4) Entonces<br />
+        Escribir "Vehiculo con placas ", placa4, " Marca " , marca3, " propiedad
+        de: ", nom4," Telefono ", tel4,"."; <br />
+        FinSi<br />
+        Si(placa = placa5) Entonces<br />
+        Escribir "Vehiculo con placas ", placa5, " Marca " , marca2, " propiedad
+        de: ", nom5," Telefono ", tel5,".";<br />
+        FinSi<br />
+        FinSegun<br />
+        Hasta Que opcion <> 1 y opcion <> 2 y opcion <> 3;<br />
+
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+      <p class="parrafo">
+        8. Realizar la siguiente figura por medio del ciclo Para <br /><br />
+      </p>
+      <p class="parrafo">Solucion:</p>
+      <p class="parrafo">
+        Proceso Ejercicio8<br /><br />
+
+        Definir usuario Como Caracter;<br />
+        Definir usu1, usu2, usu3, usu4, usu5, usu6, usu7, usu8 Como Caracter;<br />
+        Definir presentado, nopresentado Como Caracter;<br />
+        Definir aprobado, noaprobado Como Caracter;<br />
+        Definir opcion Como Entero;<br /><br />
+
+        usu1<- "Laura";<br />
+        usu2<- "Ana";<br />
+        usu3<- "Pedro";<br />
+        usu4<- "Juan";<br />
+        usu5<- "Lucas";<br />
+        usu6<- "Teddy";<br />
+        usu7<- "Pablo";<br />
+        usu8<- "Simon";<br /><br />
+
+        presentado<-"Prueba presentada";<br />
+        nopresentado<-"Prueba no presentada";<br />
+        <br />
+        aprobado<- "Aprobado";<br />
+        noaprobado<-"No aprobado";<br /><br />
+
+        Repetir<br />
+        Escribir "*** Escuela automovilistica El Maestro ***";<br />
+        Escribir "Elija una opcion:";<br />
+        Escribir "1. Registro de usuarios ";<br />
+        Escribir "2. Consultar usuarios que presentaron la prueba del curso";<br />
+        Escribir "3. Ver resultados de la prueba";<br />
+        Escribir "Digite 4 si desea salir sistema";<br />
+        Leer opcion; <br />
+        Limpiar Pantalla;<br />
+        Segun opcion Hacer<br />
+        1:<br />
+        Escribir"*** Registro maximo de 8 usuarios ***";<br />
+        Escribir "1. Digite el nombre del usuario 1";<br />
+        Leer usu1;<br />
+        Limpiar Pantalla;<br />
+        Escribir "2. Digite el nombre del usuario 2";<br />
+        Leer usu2;<br />
+        Limpiar Pantalla;<br />
+        Escribir "3. Digite el nombre del usuario 3";<br />
+        Leer usu3;<br />
+        Limpiar Pantalla;<br />
+        Escribir "4. Digite el nombre del usuario 4";<br />
+        Leer usu4;<br />
+        Limpiar Pantalla;<br />
+        Escribir "5. Digite el nombre del usuario 5";<br />
+        Leer usu5;<br />
+        Limpiar Pantalla;<br />
+        Escribir "6. Digite el nombre del usuario 6";<br />
+        Leer usu6;<br />
+        Limpiar Pantalla;<br />
+        Escribir "7. Digite el nombre del usuario 7";<br />
+        Leer usu7;<br />
+        Limpiar Pantalla;<br />
+        Escribir "8. Digite el nombre del usuario 8";<br />
+        Leer usu8;<br />
+        Limpiar Pantalla;<br />
+        Escribir "";<br />
+        Escribir "Limite de usuarios completo";<br />
+
+        2:<br />
+        Escribir "Dijite el nombre del usuario que desea consultar ";<br />
+        Leer usuario;<br />
+        Si usuario = usu1 Entonces<br />
+        Escribir "Usuario: ",usu1, " Estado de prueba: ", nopresentado; <br />
+        SiNo<br />
+        Escribir "El usuario no esta registrado";<br />
+        FinSi<br />
+        Si usuario = usu2 Entonces<br />
+        Escribir "Usuario: ",usu2, " Estado de prueba: ", presentado; <br />
+        FinSi<br />
+        Si usuario = usu3 Entonces<br />
+        Escribir "Usuario: ",usu3, " Estado de prueba: ", nopresentado; <br />
+        FinSi<br />
+        Si usuario = usu4 Entonces<br />
+        Escribir "Usuario: ",usu4, " Estado de prueba: ", presentado; <br />
+        FinSi<br />
+        Si usuario = usu5 Entonces<br />
+        Escribir "Usuario: ",usu5, " Estado de prueba: ", nopresentado; <br />
+        FinSi<br />
+        Si usuario = usu6 Entonces<br />
+        Escribir "Usuario: ",usu6, " Estado de prueba: ", presentado; <br />
+        FinSi<br />
+        Si usuario = usu7 Entonces<br />
+        Escribir "Usuario: ",usu7, " Estado de prueba: ", nopresentado; <br />
+        FinSi<br />
+        Si usuario = usu8 Entonces<br />
+        Escribir "Usuario: ",usu8, " Estado de prueba: ", presentado; <br />
+        FinSi<br />
+        Escribir"";<br />
+        <br />
+        3: Escribir "Dijite el nombre del usuario para ver el resultado de la
+        prueba ";<br />
+        Leer usuario;<br />
+        Si usuario = usu1 Entonces<br />
+        Escribir "Usuario: ",usu1, " Resultado de prueba: ",noaprobado; <br />
+        SiNo<br />
+        Escribir "El usuario no esta registrado";<br />
+        FinSi<br />
+        Si usuario = usu2 Entonces<br />
+        Escribir "Usuario: ",usu2, " Resultado de prueba ", aprobado; <br />
+        FinSi<br />
+        Si usuario = usu3 Entonces<br />
+        Escribir "Usuario: ",usu3, " Resultado de prueba ", noaprobado; <br />
+        FinSi<br />
+        Si usuario = usu4 Entonces<br />
+        Escribir "Usuario: ",usu4, " Resultado de prueba ", aprobado; <br />
+        FinSi<br />
+        Si usuario = usu5 Entonces<br />
+        Escribir "Usuario: ",usu5, " Resultado de prueba ", noaprobado; <br />
+        FinSi<br />
+        Si usuario = usu6 Entonces<br />
+        Escribir "Usuario: ",usu6, " Resultado de prueba ", aprobado; <br />
+        FinSi<br />
+        Si usuario = usu7 Entonces<br />
+        Escribir "Usuario: ",usu7, " Resultado de prueba ", noaprobado; <br />
+        FinSi<br />
+        Si usuario = usu8 Entonces<br />
+        Escribir "Usuario: ",usu8, " Resultado de prueba ",aprobado; <br />
+        FinSi<br />
+        Escribir"";<br />
+        FinSegun<br />
+        Hasta Que opcion <> 1 y opcion <> 2 y opcion <> 3;<br />
+        FinProceso<br />
+      </p>
+      <br />
+      <a href="pseint.html">Regresar</a>
+    </div>
+  </body>
+</html>

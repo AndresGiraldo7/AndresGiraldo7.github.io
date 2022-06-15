@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" type="text/css" />
+    
+<body id ="cuerpo" >
+    <center>
+    <div class="container" id="contendor">
+    <head>
+        <title>Hoja de vida | Andrés Giraldo.</title>
+    </head>
+    <table  >
+        <tr>  
+            <td><h1 class="titulo" style="text-align:left" > HOJA DE VIDA</h1></td>
+            <td><h>Seleccione un Color : </h5><select  onchange="cambiarColor(this)">
+                <option value="1" >ORIGINAL (CadetBlue)</option>
+                <option value="2" >VERDE (DarkSeaGreen)</option>
+                <option value="3" >ROJO (Fire Opal)</option>
+                <option value="4" >AMARILLO (Golden Yellow)</option>
+                </select>
+            </td>
+        </table><br>
+    <nav><br>
+        <p>&nbsp;&nbsp;Menu de Navegacion:</p>
+        <a href="../PORTAFOLIO/InformacionPersonal.html">Informacion Personal</a> - 
+        <a  href="../PORTAFOLIO/ExperienciaLabor.html">Experiencia Laboral</a> -
+        <a  href="../PORTAFOLIO/RefFami.html">Referencias Familiares</a> -
+        <a  href="../PORTAFOLIO/RefPerso.html">Referencias Personales</a> -
+        <a  href="../PORTAFOLIO/Estudios.html">Estudios Realizados</a><br> 
+        <a  href="../PORTAFOLIO/HojaDeVida.html">Ir a la pagina principal</a>
+    </nav><br>
+    <h3 class= "subtitulo">1. Informacion Principal: </h3>
+        <br>
+        <button class="accordion">Nombres :</button>
+            <div class="panel">
+                <p>Andrés Giovanny</p>
+            </div>
+
+            <button class="accordion">Apellidos :</button>
+            <div class="panel">
+                <p>Giraldo Pacheco</p>
+            </div>
+
+            <button class="accordion">Fecha de nacimiento :</button>
+            <div class="panel">
+                <p>18/04/1993</p>
+            </div>
+
+            <button class="accordion">Ciudad :</button>
+            <div class="panel">
+                <p>Bogotá</p>
+            </div>
+    </center>
+    </div>
+    <script src = cambiarColor.js> </script>
+</body>
+
+</html>

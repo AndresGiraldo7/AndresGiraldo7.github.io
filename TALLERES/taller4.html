@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Talleres 4 PSeInt</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Taller 4 PSeInt</h1>
+        <a href="https://www.youtube.com/watch?v=r3QF60D2hS4">Ver Video</a>
+        <br />
+        <p class="parrafo">
+          1.Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:<br>
+          [0] = 55 <br />
+          [1] = 99<br />
+          [2] = 11<br />
+          [3] = 56<br />
+          [4] = 69<br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso ejercicio1Arreglos <br><br>
+            Definir indice Como Entero;<br>
+            Definir vector Como Entero;<br>
+            Dimension  vector[5];<br><br>
+        
+            Para indice <- 0 Hasta 4 Con Paso  1 Hacer<br>
+                Escribir"Digita un numero";<br>
+                Leer vector[indice];<br>
+                Limpiar Pantalla;<br>
+            FinPara<br><br>
+                Para indice <- 0 Hasta 4 Con paso 1 Hacer<br>
+                    Escribir "[", indice ,"] = ", vector[indice];<br>
+                FinPara<br><br>
+        FinProceso<br>
+        
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+      </div>
+    
+      <div class="contenedor">
+        <br />
+        <p class="parrafo">
+          2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+          Números pares: 2, 4, 6, 8, 10<br>
+          Números impares: 1, 3, 5, 7, 9<br>
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">
+            Proceso ejercicio2Arreglos<br><br>
+                
+                Definir indice Como Entero;<br>
+                Definir arreglo Como Entero;<br>
+                Dimension arreglo[20];<br><br>
+                
+                Para indice <- 0 Hasta 19 Hacer<br>
+                    arreglo[indice] <-  Aleatorio(1,100);<br>
+                FinPara<br><br>
+                
+                Escribir "Los numeros pares son: " Sin Saltar;<br>
+                Para indice <- 0 Hasta 19 Hacer<br>
+                    Si arreglo[indice] MOD 2 =0 Entonces<br><br>
+                        
+                        Escribir  arreglo[indice], " " Sin saltar;<br>
+                    FinSi<br>
+                FinPara<br>
+                <br>
+                Escribir "";<br>
+                Escribir "Los numeros impares son: " Sin Saltar;<br>
+                Para indice <- 0 Hasta 19 Hacer<br>
+                    Si arreglo[indice] MOD 2 <> 0 Entonces<br><br>
+                        
+                        Escribir  arreglo[indice], " " Sin saltar;<br>
+                    FinSi<br>
+                FinPara<br>
+            FinProceso<br>
+        
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+      </div>
+
+      <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+       3.Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.<br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso ejercicio3Arreglos<br><br>
+	
+            Definir n, num , contador Como Entero;<br><br>
+            
+            Para num <-1 Hasta  1000 Hacer<br>
+                n<-1;<br>
+                contador<- 0;<br>
+                Mientras  n<= num Hacer<br>
+                    si num MOD n = 0 Entonces<br>
+                        contador<- contador +1;<br>
+                    FinSi<br>
+                    n<-n+1;<br>
+                FinMientras<br>
+                <br>
+                Si contador = 2 Entonces<br>
+                    Escribir "El numero ", num, " es primo";<br>
+                FinSi<br>
+            FinPara<br>
+        FinProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+      </div>
+
+
+      <div class="contenedor">
+    
+        <br />
+        <p class="parrafo">
+         4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+         01 02 03 04 05<br>
+         06 07 08 09 10<br>
+         11 12 13 14 15<br>
+         16 17 18 19 20<br>
+         Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.<br>
+         01 02 03 04 05<br>
+         10 09 08 07 06<br>
+         11 12 13 14 15<br>
+         20 19 18 17 16<br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso ejercicio4Arreglos<br>
+            Definir matriz Como Caracter;<br>
+            Dimension matriz[4,5];   <br>
+            Definir f como Entero;<br>
+            Definir c como Entero;<br>
+            <br>
+            matriz[0,0] <- "01";<br>
+            matriz[0,1] <- "02";<br>
+            matriz[0,2] <- "03";<br>
+            matriz[0,3] <- "04";<br>
+            matriz[0,4] <- "05";<br>
+            <br>
+            matriz[1,0] <- "06";<br>
+            matriz[1,1] <- "07";<br>
+            matriz[1,2] <- "08";<br>
+            matriz[1,3] <- "09";<br>
+            matriz[1,4] <- "10";<br>
+            <br>
+            matriz[2,0] <- "11";<br>
+            matriz[2,1] <- "12";<br>
+            matriz[2,2] <- "13";<br>
+            matriz[2,3] <- "14";<br>
+            matriz[2,4] <- "15";<br>
+            <br>
+            matriz[3,0] <- "16";<br>
+            matriz[3,1] <- "17";<br>
+            matriz[3,2] <- "18";<br>
+            matriz[3,3] <- "19";<br>
+            matriz[3,4] <- "20";<br>
+            <br>
+            Para f <- 0 Hasta 3 Hacer<br>
+                Si f mod 2 = 0 Entonces<br>
+                    Para c <- 0 Hasta 4 Hacer<br>
+                        Escribir Sin Saltar matriz[f,c]," ";<br>
+                    FinPara<br>
+                    Escribir "";  <br> 
+                SiNo<br>
+                    Para c <- 4 Hasta 0 Con Paso -1 Hacer<br>
+                        Escribir Sin Saltar matriz[f,c]," ";<br>
+                    FinPara<br>
+                    Escribir "";  <br> 
+                FinSi<br>
+            FinPara<br>     
+        FinProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+      </div>
+
+
+      <div class="contenedor">
+        <br />
+        <p class="parrafo">
+            5. Se debe de imprimir el siguiente cuadro<br /><br /><a href="fotos/cuadro.png">Ver Cuadro</a>
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo">Proceso ejercicio5Arreglos<br>
+            Definir f Como Entero;<br>
+            Definir c Como Entero;<br>
+            <br>
+            Definir fila Como Entero;<br>
+            Definir columna Como Entero;<br>
+            <br>
+            Definir tabla Como Entero;<br>
+            Dimension tabla[10,10];<br>
+            <br>
+            
+            Escribir "Columnas->" Sin Saltar;<br>
+            Para columna <- 0 Hasta 9 Hacer<br>
+                Escribir Sin Saltar " |   ",columna,"  | ";<br>
+            FinPara<br>
+            Escribir "";<br><br>
+            
+            Para fila <- 0 Hasta 9 Hacer<br><br>
+                
+                Escribir "Fila ",fila," -->"Sin Saltar;<br><br>
+                
+                Para columna <- 0 Hasta 9 Hacer<br>
+                    Si fila < 9 Entonces<br>
+                        Escribir Sin Saltar " |",columna+1," x ",fila+1," | ";<br>
+                    SiNo
+                        Escribir Sin Saltar " |",columna+1," x ",fila+1,"| ";<br>
+                    FinSi<br><br>
+                    
+                    tabla[fila,columna] <- (fila+1)*(columna+1);<br>
+                FinPara<br>
+                <br>
+                Escribir "";<br>
+            FinPara<br>
+            Escribir "";<br>
+            Escribir "Para conocer el resultado de la casilla, digite el numero de la fila: ";<br>
+            Leer f;<br>
+            Escribir "Ahora digite el numero de la columna: ";<br>
+            Leer c;<br>
+            Escribir "El resultado de la multiplicación es: ", tabla[f,c];<br>
+        FinProceso<br>
+        
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+      </div>
+</body>
+</html>

@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Taller 5 PSeInt</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Taller Condicionales en Modo Funciones</h1>
+        <br />
+        <p class="parrafo">
+          1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad. <br /><br />
+          
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso DefinirRango<br>
+	        Definir edad Como Entero;<br><br>
+	
+	        Escribir "¿Cual es su edad?";<br>
+	        Leer edad;<br>
+	        rango(edad);<br>
+	
+            FinProceso<br>
+            SubProceso  rango(edad)<br>
+	        Si edad >= 18 Entonces<br>
+		    Escribir "Usted es mayor de edad";<br>
+	        FinSi<br>
+            FinSubProceso <br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso DefinirRango<br>
+            Definir edad Como Entero;<br><br>
+            
+            Escribir "¿Cual es su edad?";<br>
+            Leer edad;<br>
+            rango(edad);<br><br>
+            
+            FinProceso<br>
+            SubProceso  rango(edad)<br>
+            Si edad <= 18 Entonces<br>
+                Escribir "Usted es un niño";<br>
+            FinSi<br>
+            FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso Ejercicio3
+	Definir nombre Como Caracter;<br>
+	Definir apellidos Como Caracter;<br>
+	Definir edad Como Entero;<br><br>
+	
+	Escribir "¿Cual es su nombre?";<br>
+	Leer nombre;<br><br>
+	
+	Escribir "¿Cuales son sus apellidos?";<br>
+	Leer apellidos;<br><br>
+	
+	Escribir "¿Cual es su edad?";<br>
+	Leer edad;<br>
+	Limpiar Pantalla;<br>
+	entrada(edad, nombre, apellidos);<br><br>
+	
+FinProceso<br><br>
+
+SubProceso entrada(edad, nombre, apellidos)<br>
+	Si edad >= 18 Entonces<br>
+		Escribir nombre, " ",apellidos," usted es mayor de edad, por lo tanto puede entrar a la fiesta.";<br>
+	SiNo<br>
+		Escribir  nombre, "  ",apellidos, " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";<br>
+	FinSi<br>
+FinSubProceso<br>
+	
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.<br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso sin_titulo<br><br>
+	
+            Definir usuario Como Caracter;<br>
+            Definir opcion Como Entero;<br>
+            Definir pelicula1, pelicula2, pelicula3 Como Caracter;<br>
+            <br>
+            pelicula1<- "MADAGASCAR";<br>
+            pelicula2<- "TIBURON";<br>
+            pelicula3<- "DUMBO";<br><br>
+            
+            Escribir "¿Cual es tu nombre de usuario?";<br>
+            Leer usuario;<br>
+            Limpiar Pantalla;<br>
+            Escribir "Elije una opcion ", usuario;<br>
+            Escribir "1. Alquilar película";<br>
+            Escribir "2. Consultar Peliculas disponibles";<br>
+            Escribir "3. Recibir pelicula";<br>
+            Leer opcion;<br>
+            Limpiar Pantalla;<br>
+            Segun opcion Hacer<br>
+                1:<br>
+                    Alquilar(pelicula1, pelicula2, pelicula3);<br>
+                2:<br>
+                    Consultar(pelicula1, pelicula2, pelicula3);<br>
+                3:  <br>
+                    Recibir();<br>
+                    
+            FinSegun<br>
+        FinProceso<br>
+        <br>
+        SubProceso Alquilar(pelicula1, pelicula2, pelicula3)<br>
+            Definir buscarPelicula Como Caracter;<br>
+            Escribir "¿Cual pelicula estas buscando?";<br>
+            Leer buscarPelicula;<br>
+            Limpiar Pantalla;<br>
+            Si (buscarPelicula = pelicula1) o (buscarPelicula = pelicula2) o (buscarPelicula = pelicula3) Entonces<br>
+                Escribir " Haz alquilado la pelicula ", buscarPelicula, " Disfrutala";<br>
+            SiNo<br>
+                Escribir "Para consultar la disponibilidad de peliculas debes ir al paso 2";<br>
+            FinSi<br>
+            <br>
+        FinSubProceso<br>
+        <br>
+        SubProceso Consultar(pelicula1, pelicula2, pelicula3)<br>
+        <br>
+            Escribir "Las peliculas disponibles son:";<br>
+            <br>
+            Escribir "1. ", pelicula1, " El costo del alquiler es de $5000";<br>
+            Escribir "2. ", pelicula2, " El costo del alquiler es de $6000";<br>
+            Escribir "3. ", pelicula3, " El costo del alquiler es de $7000";<br><br>
+            
+        FinSubProceso<br>
+        
+        SubProceso Recibir()<br><br>
+            
+            Definir novedad Como Caracter;<br>
+            Definir opcion Como Entero;<br>
+            <br>
+            Escribir  "Desea registar novedad";<br>
+            Escribir "1. Si";<br>
+            Escribir "2. No";<br>
+            Leer opcion;<br>
+            Limpiar Pantalla;<br>
+            Segun opcion hacer <br>
+            <br>
+                1: Escribir "Escriba la novedad de la pelicula: ";<br>
+                    Leer novedad;<br>
+                    Limpiar Pantalla;<br>
+                    Escribir "Novedad registrada!";<br>
+            FinSegun	<br>
+        FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso Ejercicio5<br>
+	Definir cliente Como Caracter;<br>
+	Definir producto1, producto2, producto3 Como Caracter;<br>
+	Definir caracteristica1, caracteristica2, caracteristica3 Como Caracter;<br>
+	Definir precio1, precio2, precio3 Como Real;<br><br>
+	
+	Definir opcion Como Entero;<br><br>
+	
+	producto1<-"medicamento1";<br>
+	producto2<-"medicamento2";<br>
+	producto3<-"medicamento3";<br>
+	<br>
+	caracteristica1<-"Para el Dolor";<br>
+	caracteristica2<-"Para la Inflamacion";<br>
+	caracteristica3<-"Para la Gripa";<br>
+	<br>
+	precio1<- 8500;<br>
+	precio2<- 5000;<br>
+	precio3<- 12000;<br>
+	<br>
+	Escribir "*** Bienvenido a la Drogueria Mi Salud ***";<br>
+	Escribir "Elejir opcion";<br>
+	Escribir "1. Comprar Producto ";<br>
+	Escribir "2. Ver Caracteristicas y precios de los productos";<br>
+	Escribir "3. Devoluciones";<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer<br>
+    <br>
+		1:<br>
+			Comprar(producto1, producto2, producto3, caracteristica1, caracteristica2, caracteristica3, precio1, precio2, precio3, opcion);<br>
+		2: <br>
+			Caracteristicas(producto1, producto2, producto3, caracteristica1, caracteristica2, caracteristica3, precio1, precio2, precio3);<br>
+		3:<br>
+			Devolucion(producto1, producto2, producto3, opcion);<br>
+            <br>
+	FinSegun<br>
+	<br>
+FinProceso<br>
+
+SubProceso Comprar(producto1, producto2, producto3, caracteristica1, caracteristica2, caracteristica3, precio1, precio2, precio3, opcion)<br>
+	Definir cliente Como Caracter;<br>
+	Definir venta Como Entero;<br>
+	Escribir "Por favor dijite su nombre:";<br>
+	Leer cliente;<br>
+	<br>
+	Escribir "Descripcion de productos";<br>
+	Escribir "1. ", producto1, " ",caracteristica1, " Tiene un costo de ", precio1 ," Pesos";<br>
+	Escribir "2. ", producto2, " ",caracteristica2, " Tiene un costo de ", precio2 ," Pesos";<br>
+	Escribir "3. ", producto3, " ",caracteristica3, " Tiene un costo de ", precio3 ," Pesos";<br>
+	Leer opcion;<br>
+	<br>
+	Limpiar Pantalla;<br>
+	<br>
+	Si opcion= 1 Entonces<br>
+		Escribir  producto1;<br>
+		Escribir "Descripcion del producto ", producto1;<br>
+		Escribir "Caracteristicas del producto ", caracteristica1;<br>
+		Escribir "Tiene un costo de: ", precio1, " pesos";<br>
+	Finsi<br>
+	<br>
+	Si opcion = 2 Entonces<br>
+		Escribir producto2;<br>
+		Escribir "Descripcion del producto ", producto2;<br>
+		Escribir "Caracteristicas del producto ", caracteristica2;<br>
+		Escribir "Tiene un costo de: ", precio2, " pesos";<br>
+	Finsi<br>
+	<br>
+	Si opcion = 3 Entonces<br>
+		Escribir producto3;<br>
+		Escribir "Descripcion del producto ", producto3;<br>
+		Escribir "Caracteristicas del producto ", caracteristica3;<br>
+		Escribir "Tiene un costo de: ", precio3, " pesos";<br>
+	FinSi<br>
+	<br>
+	Escribir "Elejir opcion";<br>
+	Escribir "Elija una opcion de pago";<br>
+	Escribir "1. Pago en efectivo";<br>
+	Escribir "2. Pago con tarjeta";<br>
+	Escribir "3. Pago con bono sodexo";<br>
+	Leer opcion;<br>
+	<br>
+	Escribir "*** Para confirmar la compra por favor digite nuevamente el numero del medicamento ***";<br>
+	Leer venta;<br>
+	<br>
+	Limpiar Pantalla;		<br>
+	<br>
+	Si venta = 1 Entonces<br>
+		Escribir "Factura emitida al Cliente: " ,cliente;<br>
+		Escribir "Descripcion del producto ", producto1;<br>
+		Escribir "Caracteristicas del producto ", caracteristica1;<br>
+		Escribir "Tiene un costo de: ", precio1, " pesos";<br>
+		Escribir "Gracias por su compra!!";<br>
+		<br>
+	FinSi<br>
+	<br>
+	Si venta = 2 Entonces<br>
+		Escribir "Factura emitida al Cliente: " ,cliente;<br>
+		Escribir "Descripcion del producto ", producto2;<br>
+		Escribir "Caracteristicas del producto ", caracteristica2;<br>
+		Escribir "Tiene un costo de: ", precio2, " pesos";<br>
+		Escribir "Gracias por su compra!!";<br>
+		<br>
+	FinSi<br>
+	<br>
+	Si venta = 3 Entonces<br>
+		Escribir "Factura emitida al Cliente: " ,cliente;<br>
+		Escribir "Descripcion del producto ", producto3;<br>
+		Escribir "Caracteristicas del producto ", caracteristica3;<br>
+		Escribir "Tiene un costo de: ", precio3, " pesos";<br>
+		Escribir "Gracias por su compra!!";<br>
+	FinSi<br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Caracteristicas(producto1, producto2, producto3, caracteristica1, caracteristica2, caracteristica3, precio1, precio2, precio3)<br>
+<br>
+	Escribir "Descripcion de productos";<br>
+	Escribir "1. ", producto1, " ",caracteristica1, " Tiene un costo de ", precio1 ," Pesos";<br>
+	Escribir "2. ", producto2, " ",caracteristica2, " Tiene un costo de ", precio2 ," Pesos";<br>
+	Escribir "3. ", producto3, " ",caracteristica3, " Tiene un costo de ", precio3 ," Pesos";<br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Devolucion(producto1, producto2, producto3, opcion)<br>
+<br>
+	Escribir "Seccion Devoluciones";<br>
+	Escribir "*** Para confirmar la devolucion del producto por favor digite nuevamente el numero del medicamento ***";<br>
+	Escribir "1. ",producto1;<br>
+	Escribir "2. ",producto2;<br>
+	Escribir "3. ",producto3;<br>
+	Leer opcion;<br>
+	<br>
+	Limpiar Pantalla;<br>
+	<br>
+	Si opcion = 1 Entonces<br>
+		Escribir "Devoluvion confirmada para el producto ", producto1 ," y reembolso realizado.";<br>
+	FinSi<br>
+	Si opcion = 2 Entonces<br>
+		Escribir "Devoluvion confirmada para el producto ", producto2 ," y reembolso realizado.";<br>
+	FinSi<br>
+	Si opcion = 3 Entonces<br>
+		Escribir "Devoluvion confirmada para el producto ", producto3 ," y reembolso realizado.";<br>
+	FinSi	<br>
+FinSubProceso<br>
+<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso sin_titulo<br><br>
+	
+	Definir cliente Como Caracter;<br>
+	Definir servicio1, servicio2, servicio3 Como Caracter;<br>
+	Definir opcion Como Entero;<br>
+	Definir moto Como Caracter;<br>
+
+	servicio1<-"Mantenimiento General de Motocicleta";<br>
+	servicio2<-"Mantenimiento Periodico de Motocicleta";<br>
+	servicio3<-"Lavado de motocicleta";<br>
+	
+	Escribir "*** Bienvenido a El Maquinista taller de motos ***";<br>
+	Escribir "Digite su nombre por favor:";<br>
+	Leer cliente;<br>
+	Escribir "Digite la placa de su moto";<br>
+	Leer moto;<br>
+	Limpiar Pantalla;<br>
+	Escribir "Elija una opcion";<br>
+	Escribir "1. Registrar servicio para motocicleta";<br>
+	Escribir "2. Observaciones por parte del cliente";<br>
+	Escribir "3. Registro de salida de motocicleta";<br>
+	Escribir "4. Inventario de cambios por parte del mecanico";<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer<br>
+		1:<br>
+			Registrar(servicio1, servicio2, servicio3, opcion, cliente, moto);<br>
+			<br>
+		2:<br>
+			ObservacionCliente();<br>
+			<br>
+		3:<br>
+			RegistroSalida(moto, cliente);<br>
+			<br>
+		4:<br>
+			Inventario();<br>
+	FinSegun<br>
+FinProceso<br>
+SubProceso Registrar(servicio1, servicio2, servicio3, opcion, cliente, moto)<br>
+	Escribir "Elija un servicio para su motocicleta:";<br>
+	Escribir "1. ", servicio1;<br>
+	Escribir "2. ", servicio2;<br>
+	Escribir "3. ", servicio3;<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Si opcion = 1 Entonces <br>
+		Escribir "El servicio de ", servicio1, " quedo registrado exitosamente para el cliente: ", cliente, " Propietario de la moto con placas:", moto; <br>
+	FinSi<br>
+	Si opcion = 2 Entonces<br>
+		Escribir "El servicio de ", servicio2, " quedo registrado exitosamente para el cliente: ", cliente, " Propietario de la moto con placas:", moto; <br>
+	FinSi<br>
+	Si opcion = 3 Entonces<br>
+		Escribir "El servicio de ", servicio3, " quedo registrado exitosamente para el cliente: ", cliente, " Propietario de la moto con placas:", moto; <br>
+	FinSi<br>
+FinSubProceso<br>
+
+SubProceso ObservacionCliente()<br>
+	Definir observacion Como Caracter;<br>
+	Escribir "Por favor escriba las observaciones que desea realizar:";<br>
+	Leer observacion;<br>
+	Limpiar Pantalla;<br>
+	Escribir "Observacion Guardada.";<br>
+FinSubProceso<br>
+<br>
+SubProceso RegistroSalida(moto, cliente)<br>
+	Definir salida Como Caracter;<br>
+	Escribir "Digite la fecha de salida del taller:";<br>
+	Leer salida;<br>
+	Escribir "La moto de placas " ,moto, " propiedad de ", cliente, "  fue retirada en la fecha: ", salida;<br>
+    <br>
+FinSubProceso<br>
+<br>
+SubProceso Inventario()<br>
+	Definir arreglo Como Caracter;<br>
+	Definir mecanico Como Caracter;<br>
+	mecanico<-"Rafael";<br>
+	Escribir "Por favor escriba los cambios o arreglos que se deben realizar a la motocicleta:";<br>
+	Leer arreglo;<br>
+	Limpiar Pantalla;<br>
+	Escribir "Inventario realizado por el mecanico ", mecanico, " Guardado.";<br>
+    <br>
+FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor"> 
+        <br />
+        <p class="parrafo">
+         7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso). <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+          Proceso ejercicio7<br>
+	Definir usuario Como Caracter;<br>
+	Definir peso Como Real;<br>
+	Definir estatura Como Real;<br>
+
+	Escribir "*** Bienvenido a  La Secretaria de Salud Municipal ***";<br>
+	Escribir "Sistema Para calcula tu indice de masa corporal";<br>
+	Escribir "Digita tu nombre";<br>
+	Leer usuario;<br>
+	Escribir "Cual es tu peso en Kilogramos";<br>
+	Leer peso;<br>
+	Escribir  "Cual es tu estatura en Metros, por ejemplo 1.75";<br>
+	Leer estatura;<br>
+	Limpiar Pantalla;<br>
+	indice(peso, estatura, usuario);<br>
+    <br>
+FinProceso<br>
+<br>
+SubProceso indice(peso, estatura, usuario)<br>
+	Definir imc Como Real;<br>
+	imc <- peso/(estatura^ 2);<br>
+	Escribir "Tu indice de masa corporal " ,usuario, " es:", imc;<br>
+	Si imc < 18.5 Entonces<br>
+		Escribir "Tines un Peso Bajo";<br>
+	FinSi<br>
+	Si imc >=18.5 Entonces<br>
+		Escribir "Tines un Peso Bueno";<br>
+	FinSi<br>
+	Si imc >= 25 Entonces<br>
+		Escribir "Tines un Peso Sobrepeso";<br>
+	FinSi<br>
+	Si imc >= 35 Entonces<br>
+		Escribir "Tines un Peso Obesidad";<br>
+	FinSi	<br>
+FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso Ejercicio8<br><br>
+	
+	Definir pastelero Como Caracter;<br>
+	Definir torta1, torta2, torta3 Como Caracter;<br>
+	Definir sabor1, sabor2, sabor3 Como Caracter;<br>
+	Definir cantidad1, cantidad2, cantidad3 Como Caracter;<br>
+	Definir decorado1, decorado2 Como Caracter;<br>
+	Definir opcion Como Entero;<br>
+	pastelero<-"Don Carlos";<br><br>
+	
+	torta1<-"Torta para Cumpleaños";<br>
+	torta2<-"Torta para Matrimonios";<br>
+	torta3<-"Torta para 15 años";<br>
+	<br>
+	sabor1<- "Chocolate";<br>
+	sabor2<- "Tresleches";<br>
+	sabor3<- "Vainilla";<br>
+	<br>
+	cantidad1<- "6 porciones";<br>
+	cantidad2<- "12 porciones";<br>
+	cantidad3<- "18 porciones";<br>
+	<br>
+	decorado1 <- "Decorada";<br>
+	decorado2 <- "No decorada";<br>
+	<br>
+	
+	Escribir "Registro de pedidos";<br>
+	Escribir "Elija una opcion";<br>
+	Escribir "1. Registrar Pedido";<br>
+	Escribir "2. Tortas Disponibles";<br>
+	Escribir "3. Tortas vendidas";<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer	<br>
+		1:<br>
+			Registrar(opcion,torta1,torta2,torta3,sabor1, sabor2, sabor3, cantidad1, cantidad2, cantidad3,decorado1, decorado2);<br>
+		2:<br>
+			Disponibles(torta1,torta2,torta3,sabor1, sabor2, sabor3, cantidad1, cantidad2, cantidad3,decorado1, decorado2);<br>
+		3:<br>
+			Vendidas(torta1,torta2,torta3,sabor1, sabor2, sabor3, cantidad1, cantidad2, cantidad3,decorado1, decorado2);<br>
+			<br>
+	FinSegun<br>
+FinProceso<br>
+<br>
+SubProceso Registrar(opcion,torta1,torta2,torta3,sabor1, sabor2, sabor3, cantidad1, cantidad2, cantidad3,decorado1, decorado2)<br>
+<br>
+	Escribir "Registrar producto";<br>
+	Escribir "Digite 1 para " ,torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+	Escribir "Digite 2 para " ,torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+	Escribir "Digite 3 para " ,torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Si opcion = 1 Entonces	<br>
+		Escribir "Se registro ",torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+	FinSi<br>
+	<br>
+	Si opcion = 2 Entonces<br>
+		Escribir "Se registro ",torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+	FinSi<br>
+	<br>
+	si opcion = 3 Entonces<br>
+    <br>
+		Escribir "Se registro " ,torta3," ", sabor3 ," ", cantidad3," ",decorado3;<br>
+	FinSi<br>
+FinSubProceso<br>
+<br>
+SubProceso Disponibles(torta1,torta2,torta3,sabor1, sabor2, sabor3, cantidad1, cantidad2, cantidad3,decorado1, decorado2)<br>
+	Escribir "Las tortas Disponibles son:";<br>
+	Escribir torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+	Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+	Escribir torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+    <br>
+FinSubProceso<br>
+<br>
+SubProceso Vendidas(torta1,torta2,torta3,sabor1, sabor2, sabor3, cantidad1, cantidad2, cantidad3,decorado1, decorado2)<br>
+	Escribir "Las tortas vendidas son: ";<br>
+	Escribir torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+	Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+	Escribir torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+	Escribir torta2," ", sabor1 ," ", cantidad2," ",decorado1;<br>
+	Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado2;<br>
+	Escribir torta1," ", sabor2 ," ", cantidad1," ",decorado1;<br>
+	Escribir torta3," ", sabor3 ," ", cantidad3," ",decorado1;<br>
+FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso ejercicio9<br>
+	Definir opcion Como Entero;<br>
+	Escribir "*** Aplicacion para calcular area a rectangulo, tríangulo o trapecio ***";<br>
+	Escribir "Elija una opcion: ";<br>
+	Escribir "1. Calcular el area a un rectangulo";<br>
+	Escribir "2. Calcular el area a un tríangulo";<br>
+	Escribir "3. Calcular el area a un trapecio";<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer<br>
+		1: <br>
+			Rectangulo();<br>
+		2:<br>
+			Triangulo();<br>
+		3:<br>
+			Trapecio();<br>
+			<br>
+	FinSegun<br>
+FinProceso<br>
+SubProceso Rectangulo()<br>
+	Definir alturaRectangulo Como Real;<br>
+	Definir baseRectangulo Como Real;<br>
+	Escribir "Calcular area de un rectangulo";<br>
+	Escribir "Escriba cuanto mide la altura del rectangulo";<br>
+	Leer alturaRectangulo;<br>
+	Escribir "Escriba cuanto mide la base del rectangulo";<br>
+	Leer baseRectangulo;<br>
+	Limpiar Pantalla;<br>
+	Escribir "El area del rectangulo es: " , baseRectangulo*alturaRectangulo;<br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Triangulo()<br>
+	Definir lado1 Como Real;<br>
+	Definir lado2 Como Real;<br>
+	Escribir "Calcular area de un tríangulo";<br>
+	Escribir "Escriba cuanto mide altura del triangulo";<br>
+	Leer lado1;<br>
+	Escribir "Escriba cuanto mide la base del triangulo";<br>
+	Leer lado2;<br>
+	Escribir "El area del Tríangulo es: ", (lado1*lado2)/2;<br>
+FinSubProceso<br>
+<br>
+SubProceso Trapecio()<br>
+	Definir lado3 Como Real;<br>
+	Definir lado4 Como Real;<br>
+	Definir lado5 Como Real;<br>
+	Escribir "Calcular area de un trapecio";<br>
+	Escribir "Escriba cuanto mide el lado superior";<br>
+	Leer lado3;<br>
+	Escribir "Escriba cuanto mide el lado inferior";<br>
+	Leer lado4;<br>
+	Escribir "Escriba cuanto mide h";<br>
+	Leer lado5;<br>
+	Escribir "El area del Trapecio es: " ,((lado3 + lado4 )*lado4)/2;<br>
+FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         10.El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso Ejercicio10<br>
+	Definir titular Como Caracter;<br><br>
+	
+	Definir opcion Como Entero;<br><br>
+	
+	Escribir '*** Bienvenido a Su banco fiel ***';<br>
+	Escribir '¿Cual es el nombre del titular de la cuenta?';<br>
+	Leer titular;<br>
+	Limpiar Pantalla;<br>
+	Escribir 'Elija una opcion: ';<br>
+	Escribir '1. Realizar ingreso';<br>
+	Escribir '2. Realizar retiro';<br>
+	Escribir '3. Consultar el valor';<br>
+	Leer opcion;<br>
+	Limpiar Pantalla;<br>
+	Segun opcion Hacer <br>
+		1: <br>
+			Ingreso(titular);<br>
+		2:<br>
+			Retiro(titular);<br>
+		3:<br>
+			Consultar(titular, opcion);<br>
+			<br>
+	FinSegun<br>
+FinProceso<br>
+<br>
+SubProceso Ingreso(titular)<br>
+	Definir cantidad Como Real;<br>
+	Escribir 'Bienvenido a la seccion de ingresos ',titular;<br>
+	Escribir '¿Cual es la cantidad de dinero que desea ingresar?';<br>
+	Leer cantidad;<br>
+	Limpiar Pantalla;<br>
+	Si cantidad <= 0 Entonces<br>
+		Escribir 'Digite una cantidad positiva';	<br>
+	Sino<br>
+		Escribir 'Ha realizado la el ingreso de ', cantidad , ' pesos', ' gracias por usar nuestros servicios';<br>
+	FinSi<br>
+FinSubProceso<br>
+<br>
+SubProceso Retiro(titular)<br>
+	Definir cantidad Como Real;<br>
+	Definir cantidadC Como Real;<br>
+	cantidadC<-800000;<br>
+	Escribir 'Bienvenido a la seccion de retiros ',titular;<br>
+	Escribir '¿Cual es la cantidad de dinero que desea retirar?';<br>
+	Leer cantidad;<br>
+	Limpiar Pantalla;<br>
+	Si cantidad <= cantidadC Entonces<br>
+		Escribir 'Ha realizado la el retiro de ', cantidad , ' pesos', ' gracias por usar nuestros servicios';<br>
+	Sino <br>
+		Escribir 'Saldo insuficiente';<br>
+	FinSi<br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Consultar(titular, opcion)<br>
+	Escribir 'Elije una opcion';<br>
+	Escribir '1. Consultar el costo del ingreso';<br>
+	Escribir '2. Consultar el costo del retiro';<br>
+	Leer opcion;<br>
+	Segun opcion Hacer<br>
+		1:<br>
+			Escribir titular, ' El costo del ingreso es de 0 pesos';<br>
+			<br>
+		2:<br>
+			Escribir titular, ' El costo del retiro es de 4000 pesos';<br>
+			<br>
+	FinSegun	<br>
+	<br>
+FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+    <br><hr>
+    <div class="contenedor">
+        <h1>Taller ciclos 6,7,8 Modo Funciones</h1>
+        <br />
+        <p class="parrafo">
+         6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso Ejercicio6<br>
+            <br>
+	Definir nom1, nom2,nom3 Como Caracter;<br>
+	Definir org1, org2, org3 Como Caracter;<br>
+	Definir num1, num2, num3 Como Real;<br>
+	Definir opcion Como Entero;<br><br>
+	
+	num1<- 310;<br>
+	num2<- 300;<br>
+	num3<- 301;<br>
+	<br>
+	org1<- "Tigo";<br>
+	org2<- "Claro";<br>
+	org3<- "ETB";<br>
+	<br>
+	nom1<- "Pedro";<br>
+	nom2<- "Pablo";<br>
+	nom3<- "Juan";<br>
+	<br>
+	Repetir<br>
+		Escribir "*** Administracion de contactos ***";<br>
+		Escribir "1. Añadir contacto";<br>
+		Escribir "2. Buscar Contacto";<br>
+		Escribir "3. Eliminar Contacto";<br>
+		Leer opcion;<br>
+		Limpiar pantalla;<br>
+		<br>
+		Segun opcion Hacer<br>
+			1: <br>
+				Agregar(num1, num2, num3);<br>
+			2:<br>
+				Buscar(num1, num2, num3,org1,org2,org3,nom1,nom2,nom3);<br>
+			3: <br>
+				Eliminar(num1, num2, num3,org1,org2,org3,nom1,nom2,nom3);<br>
+				<br>
+		FinSegun<br>
+	Hasta que  opcion <> 1 y opcion <> 2 y opcion <> 3;<br>
+FinProceso<br>
+<br>
+SubProceso Agregar(num1, num2, num3)<br>
+	Definir tel Como Entero;<br>
+	Definir nombre Como Caracter;<br>
+	Definir org Como Caracter;<br>
+	Escribir "Digite el numero de contacto que desea añadir";<br>
+	Leer tel;<br>
+	Si (tel = num1) o (tel = num2) o (tel = num3) Entonces<br>
+		Escribir "El numeto de contacto ya exite";<br>
+	SiNo<br>
+		Escribir "Digite el nombre completo";<br>
+		Leer nombre;<br>
+		Escribir "Digite la Organizacion";<br>
+		Leer org;<br>
+		Limpiar Pantalla;<br>
+		Escribir "El numero de contacto se ha añadido correctamente.";<br>
+		Escribir "";<br>
+	FinSi 	<br>
+	<br>
+FinSubProceso <br>
+<br>
+SubProceso Buscar(num1, num2, num3,org1,org2,org3,nom1,nom2,nom3)<br>
+	Definir tel Como Entero;<br>
+	Escribir "*** Busqueda de Contacto ***";<br>
+	Escribir "Digite el numero de contacto que desea buscar";<br>
+	Leer tel;<br>
+	<br>
+	Si tel = num1 Entonces<br>
+		Escribir "Contacto: ", nom1;<br>
+		Escribir "Organizacion: ", org1;<br>
+		Escribir "Telefono: ", num1;<br>
+		Escribir "";<br>
+        <br>
+	FinSi<br>
+	Si tel = num2 Entonces<br>
+		Escribir "Contacto: ", nom2;<br>
+		Escribir "Organizacion: ", org2;<br>
+		Escribir "Telefono: ", num2;<br>
+		Escribir "";<br>
+	FinSi<br>
+	Si tel = num3 Entonces<br>
+		Escribir "Contacto: ", nom3;<br>
+		Escribir "Organizacion: ", org3;<br>
+		Escribir "Telefono: ", num3;<br>
+		Escribir "";<br>
+	SiNo<br>
+		Escribir "Telefono no registrado";<br>
+	FinSi<br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Eliminar(num1, num2, num3,org1,org2,org3,nom1,nom2,nom3)<br>
+	Definir tel Como Entero;<br>
+	Escribir "*** Eliminar Contacto ***";<br>
+	Escribir "Digite el numero de contacto que desea eliminar";<br>
+	Leer tel;<br>
+	Si tel = num1 Entonces<br>
+		Escribir "Contacto: ", nom1;<br>
+		Escribir "Organizacion: ", org1;<br>
+		Escribir "Telefono: ", num1;<br>
+		Escribir "Contacto eliminado";<br>
+		Escribir "";<br>
+        <br>
+	FinSi<br>
+	<br>
+	Si tel = num2 Entonces<br>
+		Escribir "Contacto: ", nom2;<br>
+		Escribir "Organizacion: ", org2;<br>
+		Escribir "Telefono: ", num2;<br>
+		Escribir "Contacto eliminado";<br>
+		Escribir "";<br>
+	FinSi<br>
+	<br>
+	Si tel = num3 Entonces<br>
+		Escribir "Contacto: ", nom3;<br>
+		Escribir "Organizacion: ", org3;<br>
+		Escribir "Telefono: ", num3;<br>
+		Escribir "Contacto eliminado";<br>
+		Escribir "";<br>
+	SiNo<br>
+		Escribir "Telefono no registrado";<br>
+	FinSi<br>
+FinSubProceso<br>
+<br>
+        </p><br>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+  
+
+    <div class="contenedor">
+        
+        <br />
+        <p class="parrafo">
+         7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos. <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso Ejercicio7<br>
+	Definir placa1, placa2, placa3, placa4, placa5 Como Caracter;<br>
+	Definir marca1, marca2, marca3 Como Caracter;<br>
+	Definir nom1, nom2, nom3, nom4, nom5 Como Caracter;<br>
+	Definir tel1, tel2, tel3, tel4, tel5 Como Real;<br>
+	Definir opcion Como Entero;<br>
+	<br>
+	placa1<-"ovl598";<br>
+	placa2<-"asd585";<br>
+	placa3<-"rdf872";<br>
+	placa4<-"jld951";<br>
+	placa5<-"hfs879";<br><br>
+	
+	
+	marca1<-"Toyota";<br>
+	marca2<-"Ford";<br>
+	marca3<-"Chevrolet";<br>
+	<br>
+	nom1<- "Juan";<br>
+	nom2<- "Pedro";<br>
+	nom3<- "Laura";<br>
+	nom4<- "Pablo";<br>
+	nom5<- "Maria";<br>
+	<br>
+	tel1<-254687;<br>
+	tel2<-846877;<br>
+	tel3<-787984;<br>
+	tel4<-313548;<br>
+	tel5<-625891;<br>
+	<br>
+	
+	Repetir<br>
+		Escribir "*** Parqueadero el guardian ***";<br>
+		Escribir "1. Ingresar vehiculo";<br>
+		Escribir "2. Retirar vehiculo";<br>
+		Escribir "3. Consultar vehiculo";<br>
+		Escribir "4. Si desea salir del sistema oprima ";<br>
+		Leer opcion;<br>
+		Limpiar Pantalla;<br>
+		Segun opcion Hacer<br>
+			1:<br>
+				Ingresar(placa1, placa2, placa3, placa4, placa5);<br>
+			2:<br>
+				Retirar(placa1, placa2, placa3, placa4, placa5, marca1, marca2, marca3, nom1, nom2,nom3,nom4,nom5,tel1, tel2,tel3,tel4,tel5);<br>
+			3:<br>
+				Consultar(placa1, placa2, placa3, placa4, placa5, marca1, marca2, marca3, nom1, nom2,nom3,nom4,nom5,tel1, tel2,tel3,tel4,tel5);<br>
+		FinSegun<br>
+	Hasta Que opcion <> 1 y opcion <> 2 y opcion <> 3;<br>
+FinProceso<br>
+<br>
+SubProceso Ingresar(placa1, placa2, placa3, placa4, placa5)<br>
+	Definir nombre Como Caracter;<br>
+	Definir placa Como Caracter;<br>
+	Definir marca Como Caracter;<br>
+	Escribir "Digite la placa del vehiculo para el registro: ";<br>
+	Leer placa;<br>
+	Si (placa = placa1) o (placa= placa2) o (placa= placa3) o ( placa = placa4) o (placa = placa5) Entonces	<br>
+		Escribir  "El vehiculo ya esta registrado";<br>
+	Sino<br>
+		Escribir "Nombre Completo";<br>
+		Leer nombre;<br>
+		Escribir "Marca del vehiculo";<br>
+		Leer marca;<br>
+		Limpiar Pantalla;<br>
+		Escribir "Se han guardado sus datos para el registro.";<br>
+		Escribir "";<br>
+		Escribir "Lo sentimos cupo del parqueadero lleno.";<br>
+	FinSi	<br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Retirar(placa1, placa2, placa3, placa4, placa5, marca1, marca2, marca3, nom1, nom2,nom3,nom4,nom5,tel1, tel2,tel3,tel4,tel5)<br>
+	Definir placa Como Caracter;<br>
+	<br>
+	Escribir "Digite la placa del vehiculo para el retiro: ";<br>
+	Leer placa;<br>
+	Si (placa = placa1)  Entonces<br>
+		Escribir "Vehiculo con placas ", placa1, " Marca " , marca1, " propiedad de: ", nom1, " Telefono ", tel1, ".";<br>
+		Escribir "Retirado Exitosamente";<br>
+	FinSi<br>
+	Si  (placa= placa2) Entonces	<br>
+		Escribir "Vehiculo con placas ", placa2, " Marca " , marca2, " propiedad de: ", nom2, " Telefono ", tel2, ".";<br>
+		Escribir "Retirado Exitosamente";<br>
+	Finsi<br>
+	Si (placa= placa3) Entonces<br>
+		Escribir "Vehiculo con placas ", placa3, " Marca " , marca1, " propiedad de: ", nom3, " Telefono ", tel3, ".";<br>
+		Escribir "Retirado Exitosamente";<br>
+	Finsi<br>
+	Si ( placa = placa4) Entonces<br>
+		Escribir "Vehiculo con placas ", placa4, " Marca " , marca3, " propiedad de: ", nom4, " Telefono ", tel4, ".";<br>
+		Escribir "Retirado Exitosamente";<br>
+	FinSi<br>
+	Si(placa = placa5) Entonces<br>
+		Escribir "Vehiculo con placas ", placa5, " Marca " , marca2, " propiedad de: ", nom5, " Telefono ", tel5, ".";<br>
+		Escribir "Retirado Exitosamente";<br>
+	FinSi<br>
+	<br>
+FinSubProceso<br>
+
+<br>
+SubProceso Consultar(placa1, placa2, placa3, placa4, placa5, marca1, marca2, marca3, nom1, nom2,nom3,nom4,nom5,tel1, tel2,tel3,tel4,tel5)<br>
+	Escribir "Digite la placa del vehiculo que desea consultar ";<br>
+	Definir placa Como Caracter;<br>
+	Leer placa;<br>
+	Si (placa = placa1)  Entonces<br>
+		Escribir "Vehiculo con placas ", placa1, " Marca " , marca1, " propiedad de: ", nom1," Telefono ", tel1,".";<br>
+	Sino<br>
+		Escribir "Vehiculo no esta registrado";<br>
+	FinSi<br>
+	Si  (placa= placa2) Entonces	<br>
+		Escribir "Vehiculo con placas ", placa2, " Marca " , marca2, " propiedad de: ", nom2," Telefono ", tel2,".";<br>
+	Finsi<br>
+	Si (placa= placa3) Entonces<br>
+		Escribir "Vehiculo con placas ", placa3, " Marca " , marca1, " propiedad de: ", nom3," Telefono ", tel3,".";					<br>
+	Finsi<br>
+	Si ( placa = placa4) Entonces<br>
+		Escribir "Vehiculo con placas ", placa4, " Marca " , marca3, " propiedad de: ", nom4," Telefono ", tel4,".";					<br>
+	FinSi<br>
+	Si(placa = placa5) Entonces<br>
+		Escribir "Vehiculo con placas ", placa5, " Marca " , marca2, " propiedad de: ", nom5," Telefono ", tel5,".";<br>
+	FinSi<br>
+	<br>
+FinSubProceso
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+       
+        <br />
+        <p class="parrafo">
+         8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+         <br /><br />
+        </p>
+        <p class="parrafo">Solucion:</p>
+        <p class="parrafo"><br>
+            Proceso sin_titulo<br>
+            <br>
+	Definir usu1, usu2, usu3, usu4, usu5, usu6, usu7, usu8 Como Caracter;<br>
+	Definir presentado, nopresentado Como Caracter;<br>
+	Definir aprobado, noaprobado Como Caracter;<br>
+	Definir opcion Como Entero;<br>
+    <br>
+	usu1<- "Laura";<br>
+	usu2<- "Ana";<br>
+	usu3<- "Pedro";<br>
+	usu4<- "Juan";<br>
+	usu5<- "Lucas";<br>
+	usu6<- "Teddy";<br>
+	usu7<- "Pablo";<br>
+	usu8<- "Simon";<br>
+	<br>
+	presentado<-"Prueba presentada";<br>
+	nopresentado<-"Prueba no presentada";<br>
+	<br>
+	aprobado<- "Aprobado";<br>
+	noaprobado<-"No aprobado";<br>
+	<br>
+	Repetir<br>
+		Escribir "*** Escuela automovilistica El Maestro ***";<br>
+		Escribir "Elija una opcion:";<br>
+		Escribir "1. Registro de usuarios ";<br>
+		Escribir "2. Consultar usuarios que presentaron la prueba del curso";<br>
+		Escribir "3. Ver resultados de la prueba";<br>
+		Escribir "Digite 4 si desea salir sistema";<br>
+		Leer opcion;	<br>
+		Limpiar Pantalla;<br>
+		Segun opcion Hacer<br>
+			1:<br>
+				Registro(usu1, usu2, usu3, usu4, usu5, usu6,usu7,usu8);<br>
+				<br>
+			2:<br>
+				Consultar(usu1, usu2, usu3, usu4, usu5, usu6,usu7,usu8,nopresentado,presentado);<br>
+				<br>
+			3:<br>
+				Resultados(usu1, usu2, usu3, usu4, usu5, usu6,usu7,usu8,aprobado, noaprobado);<br>
+                <br>
+		FinSegun<br>
+	Hasta Que opcion <> 1 y opcion <> 2 y opcion <> 3;<br>
+FinProceso<br>
+<br>
+SubProceso Registro(usu1, usu2, usu3, usu4, usu5, usu6,usu7,usu8)<br>
+<br>
+	Escribir"*** Registro maximo de 8 usuarios ***";<br>
+	Escribir "1. Digite el nombre del usuario 1";<br>
+	Leer usu1;<br>
+	Limpiar Pantalla;<br>
+	Escribir "2. Digite el nombre del usuario 2";<br>
+	Leer usu2;<br>
+	Limpiar Pantalla;<br>
+	Escribir "3. Digite el nombre del usuario 3";<br>
+	Leer usu3;<br>
+	Limpiar Pantalla;<br>
+	Escribir "4. Digite el nombre del usuario 4";<br>
+	Leer usu4;<br>
+	Limpiar Pantalla;<br>
+	Escribir "5. Digite el nombre del usuario 5";<br>
+	Leer usu5;<br>
+	Limpiar Pantalla;<br>
+	Escribir "6. Digite el nombre del usuario 6";<br>
+	Leer usu6;<br>
+	Limpiar Pantalla;<br>
+	Escribir "7. Digite el nombre del usuario 7";<br>
+	Leer usu7;<br>
+	Limpiar Pantalla;<br>
+	Escribir "8. Digite el nombre del usuario 8";<br>
+	Leer usu8;<br>
+	Limpiar Pantalla;<br>
+	Escribir "";<br>
+	Escribir "Limite de usuarios completo";<br>
+	<br>
+FinSubProceso<br><br>
+
+SubProceso Consultar(usu1, usu2, usu3, usu4, usu5, usu6,usu7,usu8,nopresentado,presentado)<br>
+	Definir usuario Como Caracter;<br>
+	Escribir "Dijite el nombre del usuario que desea consultar ";<br>
+	Leer usuario;<br>
+	Limpiar Pantalla;<br>
+	Si usuario = usu1 Entonces<br>
+		Escribir "Usuario: ",usu1, " Estado de prueba: ", nopresentado; 		<br>
+	FinSi<br>
+	Si usuario = usu2 Entonces<br>
+		Escribir "Usuario: ",usu2, " Estado de prueba: ", presentado; 	<br>
+	FinSi<br>
+	Si usuario = usu3 Entonces<br>
+		Escribir "Usuario: ",usu3, " Estado de prueba: ", nopresentado; 	<br>
+	FinSi<br>
+	Si usuario = usu4 Entonces<br>
+		Escribir "Usuario: ",usu4, " Estado de prueba: ", presentado; 	<br>
+	FinSi<br>
+	Si usuario = usu5 Entonces<br>
+		Escribir "Usuario: ",usu5, " Estado de prueba: ", nopresentado; 	<br>
+	FinSi<br>
+	Si usuario = usu6 Entonces<br>
+		Escribir "Usuario: ",usu6, " Estado de prueba: ", presentado; 	<br>
+        <br>
+	FinSi<br>
+	Si usuario = usu7 Entonces<br>
+		Escribir "Usuario: ",usu7, " Estado de prueba: ", nopresentado; 	<br>
+	FinSi<br>
+	Si usuario = usu8 Entonces<br>
+		Escribir "Usuario: ",usu8, " Estado de prueba: ", presentado;<br>
+	SiNo<br>
+		Escribir "Estudiante no registrado";<br>
+	FinSi<br>
+	Escribir"";<br>
+    <br>
+	<br>
+FinSubProceso<br>
+<br>
+SubProceso Resultados(usu1, usu2, usu3, usu4, usu5, usu6,usu7,usu8,aprobado, noaprobado)<br>
+	Definir usuario Como Caracter;<br>
+	Escribir "Dijite el nombre del usuario para ver el resultado de la prueba ";<br>
+	Leer usuario;<br>
+	Si usuario = usu1 Entonces<br>
+		Escribir "Usuario: ",usu1, " Resultado de prueba: ",noaprobado; 	<br>
+	SiNo<br>
+		Escribir "El usuario no esta registrado";<br>
+	FinSi<br>
+	Si usuario = usu2 Entonces<br>
+		Escribir "Usuario: ",usu2, " Resultado de prueba ", aprobado; 	<br>
+	FinSi<br>
+	Si usuario = usu3 Entonces<br>
+		Escribir "Usuario: ",usu3, " Resultado de prueba ", noaprobado; 	<br>
+	FinSi<br>
+	Si usuario = usu4 Entonces<br>
+		Escribir "Usuario: ",usu4, " Resultado de prueba ", aprobado; 	<br>
+	FinSi<br>
+	Si usuario = usu5 Entonces<br>
+		Escribir "Usuario: ",usu5, " Resultado de prueba ", noaprobado; 	<br>
+	FinSi<br>
+	Si usuario = usu6 Entonces<br>
+		Escribir "Usuario: ",usu6, " Resultado de prueba ", aprobado; 	<br>
+	FinSi<br>
+	Si usuario = usu7 Entonces<br>
+		Escribir "Usuario: ",usu7, " Resultado de prueba ", noaprobado; 	<br>
+	FinSi<br>
+	Si usuario = usu8 Entonces<br>
+		Escribir "Usuario: ",usu8, " Resultado de prueba ",aprobado; 	<br>
+	FinSi<br>
+	Escribir"";<br>
+	<br>
+	
+FinSubProceso<br>
+        </p>
+        <br />
+        <a href="pseint.html">Regresar</a>
+    </div>
+<hr><br>
+
+<div class="contenedor">
+    <h1>Taller Arreglos en Modo Funciones</h1>
+    <br />
+    <p class="parrafo">
+      1.  Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:
+      [0] = 55<br>
+      [1] = 99<br>
+      [2] = 11<br>
+      [3] = 56<br>
+      [4] = 69<br /><br />
+      
+    </p>
+    <p class="parrafo">Solucion:</p>
+    <p class="parrafo"><br>
+        Proceso ejercicio1<br>
+        Escribir "Digite 5 numeros para llenar el vector";<br>
+        Escribir "";<br>
+        EscribirVector();<br>
+        <br>
+    FinProceso<br>
+    
+    SubProceso EscribirVector()<br>
+        Definir indice Como Entero;<br>
+        Definir vector Como Entero;<br>
+        Dimension  vector[5];<br>
+        <br>
+        Para indice <- 0 Hasta 4 Con Paso  1 Hacer<br>
+            Escribir"Digita un numero:";<br>
+            Leer vector[indice];<br>
+            <br>
+        FinPara<br>
+        Escribir "";<br>
+        Escribir"Resultado: ";<br>
+        Escribir "";<br>
+        Para indice <- 0 Hasta 4 Con paso 1 Hacer<br>
+            Escribir "[", indice ,"] = ", vector[indice];<br>
+        FinPara<br>
+        <br>
+    FinSubProceso<br>
+    <br>
+    </p>
+    <br />
+    <a href="pseint.html">Regresar</a>
+</div>
+
+<div class="contenedor">
+    
+    <br />
+    <p class="parrafo">
+      2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+      Números pares: 2, 4, 6, 8, 10<br>
+      Números impares: 1, 3, 5, 7, 9 <br /><br />. <br /><br />
+      
+    </p>
+    <p class="parrafo">Solucion:</p>
+    <p class="parrafo"><br>
+        Proceso ejercicio2<br>
+        Escribir"***Definir Numero par o impar en lista aleatoria de 1 a 100***";<br>
+        Escribir"";<br>
+        DefinirNumero();<br>
+        FinProceso<br>
+        <br>
+        SubProceso DefinirNumero()<br>
+        <br>
+        Definir indice Como Entero;<br>
+        Definir arreglo Como Entero;<br>
+        Dimension arreglo[20];<br>
+        <br>
+        Para indice <- 0 Hasta 19 Hacer<br>
+            arreglo[indice] <-  Aleatorio(1,100);<br>
+        FinPara<br>
+        <br>
+        Escribir "Los numeros pares son: " Sin Saltar;<br>
+        Para indice <- 0 Hasta 19 Hacer<br>
+            Si arreglo[indice] MOD 2 =0 Entonces<br>
+                Escribir  arreglo[indice], " " Sin saltar;<br>
+            FinSi<br>
+        FinPara<br>
+        <br>
+        Escribir "";<br>
+        Escribir "Los numeros impares son: " Sin Saltar;<br>
+        Para indice <- 0 Hasta 19 Hacer<br>
+            Si arreglo[indice] MOD 2 <> 0 Entonces<br>
+                Escribir  arreglo[indice], " " Sin saltar;<br>
+            FinSi<br>
+        FinPara<br>
+        Escribir "";<br>
+    FinSubProceso<br>
+    </p><br>
+    <br />
+    <a href="pseint.html">Regresar</a>
+</div>
+
+<div class="contenedor">
+    
+    <br />
+    <p class="parrafo">
+      3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.
+    </p>
+    <p class="parrafo">Solucion:</p>
+    <p class="parrafo"><br>
+        SubProceso NumPrimos()<br>
+	Definir n, num , contador Como Entero;<br>
+    <br>
+	Para num <-1 Hasta  1000 Hacer<br>
+		n<-1;<br>
+		contador<- 0;<br>
+		Mientras  n<= num Hacer<br>
+			si num MOD n = 0 Entonces<br>
+				contador<- contador +1;<br>
+			FinSi<br>
+			n<-n+1;<br>
+		FinMientras<br>
+		<br>
+		Si contador = 2 Entonces<br>
+			Escribir "El numero ", num, " es primo";<br>
+		FinSi<br>
+	FinPara		<br>
+FinSubProceso<br>
+        
+    </p>
+    <br />
+    <a href="pseint.html">Regresar</a>
+</div>
+
+
+<div class="contenedor">
+        
+    <br />
+    <p class="parrafo">
+     4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+     01 02 03 04 05<br>
+     06 07 08 09 10<br>
+     11 12 13 14 15<br>
+     16 17 18 19 20<br>
+     Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.<br>
+     01 02 03 04 05<br>
+     10 09 08 07 06<br>
+     11 12 13 14 15<br>
+     20 19 18 17 16 <br /><br />
+    </p>
+    <p class="parrafo">Solucion:</p>
+    <p class="parrafo"><br>
+        Proceso ejercicio4<br>
+        Escribir "*** Imprimido Matriz ***";<br>
+        Escribir"";<br>
+        EscribirMatriz();<br>
+    FinProceso<br>
+    <br>
+    SubProceso EscribirMatriz()<br>
+        Definir matriz Como Caracter;<br>
+        Dimension matriz[4,5];   <br>
+        Definir f como Entero;<br>
+        Definir c como Entero;<br>
+        <br>
+        matriz[0,0] <- "01";<br>
+        matriz[0,1] <- "02";<br>
+        matriz[0,2] <- "03";<br>
+        matriz[0,3] <- "04";<br>
+        matriz[0,4] <- "05";<br>
+        <br>
+        matriz[1,0] <- "06";<br>
+        matriz[1,1] <- "07";<br>
+        matriz[1,2] <- "08";<br>
+        matriz[1,3] <- "09";<br>
+        matriz[1,4] <- "10";<br>
+        <br>
+        matriz[2,0] <- "11";<br>
+        matriz[2,1] <- "12";<br>
+        matriz[2,2] <- "13";<br>
+        matriz[2,3] <- "14";<br>
+        matriz[2,4] <- "15";<br>
+        <br>
+        matriz[3,0] <- "16";<br>
+        matriz[3,1] <- "17";<br>
+        matriz[3,2] <- "18";<br>
+        matriz[3,3] <- "19";<br>
+        matriz[3,4] <- "20";<br>
+        <br>
+        Para f <- 0 Hasta 3 Hacer<br>
+            Si f mod 2 = 0 Entonces<br>
+                Para c <- 0 Hasta 4 Hacer<br>
+                    Escribir Sin Saltar matriz[f,c]," ";<br>
+                FinPara<br>
+                Escribir "";   <br>
+            SiNo<br>
+                Para c <- 4 Hasta 0 Con Paso -1 Hacer<br>
+                    Escribir Sin Saltar matriz[f,c]," ";<br>
+                FinPara<br>
+                Escribir "";   <br>
+            FinSi<br>
+        FinPara<br>
+        <br>
+    FinSubProceso<br>
+    <br>
+    </p>
+    <br />
+    <a href="pseint.html">Regresar</a>
+</div>
+
+
+<div class="contenedor">
+        
+    <br />
+    <p class="parrafo">
+     5.Se debe de imprimir el siguiente cuadro <br /><br /><a href="fotos/cuadro.png">Ver cuadro</a>
+    </p>
+    <p class="parrafo">Solucion:</p>
+    <p class="parrafo"><br>
+        Proceso ejercicio5	<br>
+        Escribir "*** Tabla de Multiplicar ***";<br>
+        Escribir "";<br>
+        TablaMultiplicar();	<br>
+    FinProceso<br>
+    <br>
+    SubProceso TablaMultiplicar()<br>
+        Definir f Como Entero;<br>
+        Definir c Como Entero;<br>
+        <br>
+        Definir fila Como Entero;<br>
+        Definir columna Como Entero;<br>
+        <br>
+        Definir tabla Como Entero;<br>
+        Dimension tabla[10,10];<br>
+        <br>
+        Escribir "Columnas->" Sin Saltar;<br>
+        Para columna <- 0 Hasta 9 Hacer<br>
+            Escribir Sin Saltar " |   ",columna,"  | ";<br>
+        FinPara<br>
+        Escribir "";<br>
+        <br>
+        Para fila <- 0 Hasta 9 Hacer<br>
+        <br>
+            Escribir "Fila ",fila," -->"Sin Saltar;<br>
+            <br>
+            Para columna <- 0 Hasta 9 Hacer<br>
+                Si fila < 9 Entonces<br>
+                    Escribir Sin Saltar " |",columna+1," x ",fila+1," | ";<br>
+                SiNo<br>
+                    Escribir Sin Saltar " |",columna+1," x ",fila+1,"| ";<br>
+                FinSi<br>
+                <br>
+                tabla[fila,columna] <- (fila+1)*(columna+1);<br>
+            FinPara<br>
+            <br>
+            Escribir "";<br>
+        FinPara<br>
+        Escribir "";<br>
+        Escribir "Para conocer el resultado de la casilla, digite el numero de la fila: ";<br>
+        Leer f;<br>
+        Escribir "Ahora digite el numero de la columna: ";<br>
+        Leer c;<br>
+        Escribir "El resultado de la multiplicación es: ", tabla[f,c];<br>
+        <br>
+        <br>
+    FinSubProceso<br>
+    </p>
+    <br />
+    <a href="pseint.html">Regresar</a>
+</div>
+
+
+</body>
+</html>

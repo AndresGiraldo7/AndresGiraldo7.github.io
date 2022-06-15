@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Taller 1 Java</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Taller 1 Java</h1><br>
+        <p class="parrafo">1. Realizar un programa el cual solicite su nombre y apellidos.</p>
+        <p class="parrafo">Solucion:</p>
+      
+	
+            package com.taller.variables;
+
+
+            public class App {
+                private static String apellidos;
+                private static String nombre;
+            
+                public static void main(String[] args) {
+            
+                    Persona persona = new Persona(nombre, apellidos);
+                    persona.Mostrar();
+                    
+                }
+            }<br><br>
+
+            package com.taller.variables;
+import java.util.Scanner;
+class Persona {
+    private String nombre;
+    private String apellidos;
+    private static Scanner input;
+    public Persona(String nombre, String apellidos) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    
+    public void Mostrar(){
+
+        System.out.println("Escriba su nombre");
+        input = new Scanner(System.in);
+        nombre = input.nextLine();
+        System.out.println("Escriba sus apellidos");
+        apellidos = input.nextLine();
+        System.out.println("Hola "+nombre+" "+apellidos);
+    }
+}
+        </p><br>
+        <a href="java.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <p class="parrafo">2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+        <p class="parrafo">Solucion:</p><br><br>
+        package com.taller.variables;
+
+    public class App {
+    private static String apellidos;
+    private static String nombre;
+    private static Integer edad;
+    private static Double estatura;
+    public static void main(String[] args) {
+
+        Persona persona = new Persona(nombre, apellidos, edad, estatura);
+        persona.Mostrar();
+        
+    }
+}   
+	<br><br>
+    package com.taller.variables;
+    import java.util.Scanner;
+    class Persona {
+        private String nombre;
+        private String apellidos;
+        private Integer edad;
+        private Double estatura;
+        private static Scanner input;
+        public Persona(String nombre, String apellidos, Integer edad, Double estatura) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.edad = edad;
+            this.estatura = estatura;
+        }
+    
+        public String getNombre() {
+            return nombre;
+        }
+    
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+    
+        public String getApellidos() {
+            return apellidos;
+        }
+    
+        public void setApellidos(String apellidos) {
+            this.apellidos = apellidos;
+        }
+    
+        public Integer getEdad(Integer edad){
+            return edad;
+        }
+    
+        public void setEdad(Integer edad) {
+            this.edad = edad;
+        }
+    
+        public Double getEstatura(Double estatura){
+            return estatura;
+        }
+    
+        public void setEstatura(Double estatura) {
+            this.estatura = estatura;
+        }
+    
+        public void Mostrar(){
+    
+            System.out.println("Escriba su nombre: ");
+            input = new Scanner(System.in);
+            nombre = input.nextLine();
+            System.out.println("Escriba sus apellidos: ");
+            apellidos = input.nextLine();
+            System.out.println("Cual es su edad: ");
+            edad = input.nextInt();
+            System.out.println("Cual es su estatura: ");
+            estatura = input.nextDouble();
+            System.out.println("Hola "+nombre+" "+apellidos+" edad: "+edad+ " estatura "+estatura);
+        }
+    }
+        </p><br>
+        <a href="java.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">
+        <p class="parrafo">3. Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p>
+        <p class="parrafo">Solucion:</p><br><br>
+        package com.taller.variables;
+
+public class App {
+    private static String apellidos;
+    private static String nombre;
+    private static String nombreM;
+    private static String apellidoM;
+    private static String nombreP;
+    private static String apellicoP;
+
+    public static void main(String[] args) {
+        Persona persona = new Persona(nombre, apellidos, nombreM, apellidoM, nombreP, apellicoP);
+        persona.Mostrar();       
+    }
+}
+<br><br>
+package com.taller.variables;
+import java.util.Scanner;
+class Persona {
+    private String nombre;
+    private String apellidos;
+    private String nombreM;
+    private String apellidoM;
+    private String nombreP;
+    private String apellidoP;
+
+    private static Scanner input;
+    public Persona(String nombre, String apellidos, String nombreM, String apellidoM, String nombreP, String apellidoP) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.nombreM = nombreM;
+        this.apellidoM = apellidoM;
+        this.nombreP = nombreP;
+        this.apellidoP = apellidoP;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getApellidos() {
+        return apellidos;
+    }
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    public String getNombreM() {
+        return nombreM;
+    }
+    public void setNombreM(String nombreM) {
+        this.nombreM = nombreM;
+    }
+    public String ApellidoM(){
+        return apellidoM;
+    }
+    public void setApellidoM(String apellidoM) {
+        this.apellidoM = apellidoM;
+    }
+    public String getNombreP() {
+        return nombreP;
+    }
+    public void setNombreP(String nombreP) {
+        this.nombreP = nombreP;
+    }
+    public String ApellidoP(){
+        return apellidoP;
+    }
+    public void setApellidoP(String apellidoP) {
+        this.apellidoP = apellidoP;
+    }
+    public void Mostrar(){
+
+        System.out.println("Escriba su nombre: ");
+        input = new Scanner(System.in);
+        nombre = input.nextLine();
+        System.out.println("Escriba sus apellidos: ");
+        apellidos = input.nextLine();
+        System.out.println("Escriba el nombre de su Mamá: ");
+        nombreM = input.nextLine();
+        System.out.println("Escriba el apellido de su Mamá: ");
+        apellidoM = input.nextLine();
+        System.out.println("Escriba el nombre de su papá: ");
+        nombreP = input.nextLine();
+        System.out.println("Escriba el apellido de su papá: ");
+        apellidoP = input.nextLine();
+        System.out.println("Yo "+nombre+" "+apellidos+" "+" Soy hijo de "+nombreM+" "+apellidoM+" y "+nombreP+" "+apellidoP+".");
+        }
+    }
+        </p>
+
+    </div>
+
+    <div class="contenedor">
+        <p class="parrafo">4.Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País].</p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.variables;
+
+        public class App {
+        
+            private static String pais;
+            private static String ciudad;
+        
+            public static void main( String[] args ){
+                Espacio espacio = new Espacio(pais, ciudad);
+                espacio.Mostrar();
+            }
+        }
+        <br><br>
+        package com.taller.variables;
+import java.util.Scanner;
+
+
+class Espacio {
+    private String pais;
+    private String ciudad;
+    private static Scanner input;
+
+    public Espacio(String pais, String ciudad){
+        this.pais = pais;
+        this.ciudad = ciudad;
+    }
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+ 
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+    public void Mostrar(){
+        System.out.println("En que país vive: " );
+        input = new Scanner(System.in);
+        pais = input.nextLine();
+        System.out.println("Cual es la ciudad capital del pais donde vive: ");
+        ciudad = input.nextLine();
+        System.out.print("\033[H\033[2J");
+        System.out.println("La ciudad "+ciudad+" Es la capital del país "+pais);
+    }
+
+}
+
+        </p><br>
+        <a href="java.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        
+        <p class="parrafo">5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.variables;
+
+public class App {
+
+    private static String NombreMascota;
+    private static Integer EdadMascota;
+    private static String TipoMascota;
+    private static String NombreProp;
+
+    public static void main( String[] args ){
+        Descripcion descripcion = new Descripcion(NombreMascota, EdadMascota, TipoMascota, NombreProp); 
+        descripcion.Mostrar();
+    }
+}<br><br>
+package com.taller.variables;
+import java.util.Scanner;
+
+public class Descripcion {
+    private String NombreMascota;
+    private Integer EdadMascota;
+    private String TipoMascota;
+    private String NombreProp;
+    private static Scanner input;
+    
+    public Descripcion(String nombreMascota, Integer edadMascota, String tipoMascota, String nombreProp) {
+        NombreMascota = nombreMascota;
+        EdadMascota = edadMascota;
+        TipoMascota = tipoMascota;
+        NombreProp = nombreProp;
+    }
+
+    public String getNombreMascota() {
+        return NombreMascota;
+    }
+
+    public void setNombreMascota(String NombreMascota) {
+        this.NombreMascota = NombreMascota;
+    }
+
+    public Integer getEdadMascota() {
+        return EdadMascota;
+    }
+
+    public void setEdadMascota(Integer EdadMascota) {
+        this.EdadMascota = EdadMascota;
+    }
+
+    public String getTipoMascota() {
+        return TipoMascota;
+    }
+
+    public void setTipoMascota(String TipoMascota) {
+        this.TipoMascota = TipoMascota;
+    }
+
+    public String getNombreProp() {
+        return NombreProp;
+    }
+
+    public void setNombreProp(String NombreProp) {
+        this.NombreProp = NombreProp;
+    }
+
+    public void Mostrar(){
+
+        System.out.println("Cual es el nombre de su mascota: " );
+        input = new Scanner(System.in);
+        NombreMascota = input.nextLine();
+        System.out.println("Cual es la edad de su mascota: ");
+        EdadMascota = input.nextInt();
+        System.out.println("Que tipo de mascota tiene: ");
+        TipoMascota = input.next();
+        System.out.println("Cual es Su nombre: ");
+        NombreProp = input.next();
+        System.out.print("\033[H\033[2J");
+        System .out.println(NombreMascota+" es un(a) "+TipoMascota+", el cual, tiene "+EdadMascota+" años de edad y "+NombreProp+" es actualmente su dueño(a).");
+    }
+
+}
+
+        </p><br>
+        <a href="java.html">Regresar</a>
+    </div>
+
+
+   
+    </body

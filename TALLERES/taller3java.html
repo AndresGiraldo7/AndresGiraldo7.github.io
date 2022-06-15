@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css" />
+    <title>Document</title>
+</head>
+<body>
+        <div class="contenedor">
+        <h1>Taller 3 Java</h1><br>
+        <p class="parrafo">1. Realizar la siguiente figura por medio del ciclo Para.<br><br><a href=" fotos/figura1.png ">Ver Figura</a></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+        public class App {
+            public static void main( String[] args ){
+               DibujandoTriangulo triangulo = new DibujandoTriangulo();
+               triangulo.Dibujar();
+            }
+        }<br><br>
+        package com.taller.ciclos;
+
+        public class DibujandoTriangulo {
+        
+            public void Dibujar(){
+                for (int i = 0; i < 10; i++){
+                    for (int x = 0; x < i; x++){
+                        System.out.print("*");
+                    }
+                    System.out.println("");
+                }
+            }
+        }
+        
+        </p><br>
+
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+    <div class="contenedor">    
+        <p class="parrafo">2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer<br><br><a href=" fotos/figura2.png ">Ver Figura</a></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+
+        public class App {
+            public static void main( String[] args){
+        
+                DibujarTrianguloRev trianguloRev = new DibujarTrianguloRev();
+                trianguloRev.Dibujar();
+            }
+        }
+<br><br>  
+package com.taller.ciclos;
+
+public class DibujarTrianguloRev {
+    
+    public void Dibujar(){
+        for (int i = 0; i < 10; i++){
+            for(int j = 10; j > i; j--){
+                System.out.print(" "); 
+            }
+            for(int x = 0; x < i; x++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}      
+
+        </p><br>
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+    <div class="contenedor">
+        <p class="parrafo">3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que<br><br><a href=" fotos/figura3.png ">Ver Figura</a></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+public class App {
+    public static void main( String[] args ) {
+
+        DibujarArbol arbol = new DibujarArbol();
+        arbol.Dibujar();
+    }
+}
+<br><br>
+package com.taller.ciclos;
+
+public class DibujarArbol {
+
+    public void Dibujar(){
+        for(int i=0; i < 16; i++){
+
+            if(i<12){
+                for (int x = 11; x > i; x--){
+                    System.out.print(" ");
+                }
+                for (int j = 0; j < i; j++){
+                    System.out.print("*");
+                    if(j>0){
+                        System.out.print("*");
+                    }
+                }
+            }
+
+            if(i>= 14){
+                for(int x = 11; x > i -11; x--){
+                if(i - 12 < 1 && x == 10){
+                    System.out.print("");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            for (int j = 0; j < i - 11; j++){
+                System.out.print("*");
+                if (i - 12 < 1 ){
+                    System.out.print("**");
+                }
+                if(j > 0){
+                    System.out.print("*");
+                    }
+                }
+            }   
+            System.out.println("");
+        }    
+    }
+}
+        </p><br>
+        
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+
+    <div class="contenedor">
+        <p class="parrafo">4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:
+        <br><br><a href=" fotos/figura4.png ">Ver Tabla</a></p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+        public class App {
+            public static void main( String[] args ){
+                Tabla tablas = new Tabla();
+                tablas.Multiplicar();
+            }
+        }
+        <br><br>
+        package com.taller.ciclos;
+import java.util.Scanner;
+
+public class Tabla {
+
+    private Scanner num;
+
+    public void Multiplicar(){
+        Integer opcion;
+        num = new Scanner(System.in);
+        do{
+            System.out.println("Tablas de multiplicar");
+            System.out.println("Digite un numero del 1 al 10");
+            opcion = num.nextInt();
+            System.out.print("\033[H\033[2J");
+            System.out.println("La tabla del "+opcion+" es:");
+            for (int i = 1; i < 11; i++) {
+                System.out.println(i + " X " + opcion + " = " + i * opcion);
+            }
+            System.out.println("Escriba 0 para salir.");
+            opcion = num.nextInt();
+            if (opcion == 0){
+                break;
+            }
+        }while (opcion != 0);
+    }
+}
+        </p><br>
+        
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+
+    <div class="contenedor">
+        <p class="parrafo">5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
+        </p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+        public class App {
+            public static void main( String[] args ){
+                
+                Saludo salud = new Saludo();
+                salud.Saludar();
+            }
+        }
+<br><br>        
+package com.taller.ciclos;
+
+import java.util.Scanner;
+
+public class Saludo {
+    String persona;
+    static Scanner input = new Scanner(System.in);
+    Integer n = 1;
+    Integer i =1;
+    Integer enter = 1 ;
+    public void Saludar(){
+        System.out.println("Digita tu nombre: ");
+        persona = input.nextLine();
+        do{ 
+            System.out.println(i+" ****Saludo Infinito****");
+            System.out.println("Hola "+persona+" te voy a saludar cada vez que dijites la tecla 1 y presiones un enter.");
+            i++;
+            System.out.println("Escriba cualquier letra Si ya no quieres que te saluden más.");
+            enter = input.nextInt(); 
+        } while (n!= 0 );
+    }
+}
+
+        </p><br>
+        
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+
+
+    <div class="contenedor">
+       
+        <p class="parrafo">6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+public class App {
+    static private String nombre;
+    static private String org;
+    static private Integer tel;
+    public static void main( String[] args ){
+       
+        Libreta contact = new Libreta(nombre, org, tel);
+        contact.Administracion();
+    }
+}
+<br><br>
+package com.taller.ciclos;
+import java.util.Scanner;
+
+public class Libreta {
+
+    String nombre;
+    String org;
+    Integer tel;
+    Integer opcion;
+    
+    Integer num1=300;
+    Integer num2=310;
+    Integer num3=301;
+
+    String org1 ="Claro";
+    String org2 ="Tigo";
+    String org3 ="ETB";
+
+    String nom1 = "Pedro";
+    String nom2 = "Pablo";
+    String nom3 = "Juan";
+
+    Scanner input = new Scanner(System.in);
+
+    public Libreta(String nombre, String org, Integer tel) {
+        this.nombre = nombre;
+        this.org = org;
+        this.tel = tel;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public Integer getTel() {
+        return tel;
+    }
+    public void setTel(Integer tel) {
+        this.tel = tel;
+    }
+    public String getOrg() {
+        return org;
+    }
+    public void setOrg(String org) {
+        this.org = org;
+    }
+
+    public void Administracion(){
+        do{
+            System.out.println("***Administracion de contactos****");
+            System.out.println("Elija una opcion");
+            System.out.println("1. Añadir contacto");
+            System.out.println("2. Buscar contacto");
+            System.out.println("3. Eliminar contacto");
+            System.out.println("4. Para salir del sistema");
+            System.out.println("**************************************");
+            opcion = input.nextInt();
+            System.out.print("\033[H\033[2J");
+        switch (opcion){
+
+            case 1:
+                System.out.println("Digite el numero de contacto que desea añadir:");
+                tel = input.nextInt();
+                System.out.print("\033[H\033[2J");
+                    if (tel.equals(num1) || tel.equals(num2) || tel.equals(num3)){
+                        System.out.println("El numero de contacto ya exite.\n");
+                    }else{
+                        System.out.println("Digite nombre completo:");
+                        nombre = input.next();
+                        System.out.println("Digite el nombre de la organizacion:");
+                        org = input.next();
+                        System.out.print("\033[H\033[2J");
+                        System.out.println("El numero de contacto se ha añadido correctamente. \n");
+                }
+            break;
+            case 2:
+                System.out.println("****Busqueda de contacto****");
+                System.out.println("Digite el numero de contacto que desea buscar:");
+                tel = input.nextInt();
+                System.out.print("\033[H\033[2J");
+                if(tel.equals(num1)){
+                    System.out.println("Contacto: "+nom1);
+                    System.out.println("Organizacion: "+org1);
+                    System.out.println("Telefono: "+num1+"\n");
+                }else{
+                    System.out.println("Contacto no registrado.");
+                }
+                if(tel.equals(num2)){
+                    System.out.println("Contacto: "+nom2);
+                    System.out.println("Organizacion: "+org2);
+                    System.out.println("Telefono: "+num2+"\n");
+                }
+                if(tel.equals(num3)){
+                    System.out.println("Contacto: "+nom3);
+                    System.out.println("Organizacion: "+org3);
+                    System.out.println("Telefono: "+num3+"\n");
+                }
+            break;
+            case 3:
+                System.out.println("***Eliminar Contacto***");
+                System.out.println("Digite el numero de Contacto que desea eliminar contacto");
+                tel = input.nextInt();
+                System.out.print("\033[H\033[2J");
+                if(tel.equals(num1)){
+                    System.out.println("Contacto: "+nom1);
+                    System.out.println("Organizacion: "+org1);
+                    System.out.println("Telefono: "+num1+"\n");
+                    System.out.println("Contacto eliminado. \n");
+                }else{
+                    System.out.println("Contacto no registrado.");
+                }
+                if (tel.equals(num2)){
+                    System.out.println("Contacto: "+nom2);
+                    System.out.println("Organizacion: "+org2);
+                    System.out.println("Telefono: "+num2+"\n");
+                    System.out.println("Contacto eliminado. \n");
+                }
+                if(tel.equals(num3)) {
+                    System.out.println("Contacto: "+nom3);
+                    System.out.println("Organizacion: "+org3);
+                    System.out.println("Telefono: "+num3+"\n");
+                    System.out.println("Contacto eliminado. \n");
+                }
+                break;
+            }
+        }while (opcion != 4);
+    }
+}
+
+        
+        </p><br>
+        
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+
+    <div class="contenedor">
+      
+        <p class="parrafo">7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+
+        public class App {
+            static private String nombre;
+            static private String placa;
+            static private String marca;
+        
+            public static void main( String[] args ){
+                Parqueadero parquear = new Parqueadero(nombre, placa, marca);
+                parquear.Administracion();
+                
+            }
+        }
+<br><br>        
+package com.taller.ciclos;
+import java.util.Scanner;
+
+public class Parqueadero {
+    private String placa;
+    private String nombre;
+    private String marca;
+    Integer opcion;
+    Scanner input = new Scanner(System.in);
+     
+    String placa1 ="ovl598";
+    String placa2 = "afs456";
+    String placa3 = "axc966";
+    String placa4 = "dad868";
+    String placa5 = "dfy868";
+
+    String marca1 = "Toyota";
+    String marca2 = "Ford";
+    String marca3 = "Chevrolet";
+
+    String nom1 = "Juan";
+    String nom2 = "Pedro";
+    String nom3 = "Laura";
+    String nom4 = "Pablo";
+    String nom5 = "Maria";
+    
+    String tel1 = "564867";
+    String tel2 = "487669";
+    String tel3 = "789754";
+    String tel4 = "853254";
+    String tel5 = "215463";
+    
+    public Parqueadero(String placa, String nombre, String marca) {
+        this.placa = placa;
+        this.nombre = nombre;
+        this.marca = marca;
+    }
+  
+    /**
+     * @return String return the placa
+     */
+    public String getPlaca() {
+        return placa;
+    }
+
+    /**
+     * @param placa the placa to set
+     */
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    /**
+     * @return String return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return String return the marca
+     */
+    public String getMarca() {
+        return marca;
+    }
+
+    /**
+     * @param marca the marca to set
+     */
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+   
+
+public void Administracion(){
+
+    do{
+        
+        System.out.println("*****Parqueadero el guardian****");
+        System.out.println("Placas de Vehiculos parquedos actualmente: ovl598, afs456, axc966, dad868, dfy868 ");
+        System.out.println("1. Ingresar vehiculo");
+        System.out.println("2. Retirar vehiculo");
+        System.out.println("3. Consultar vehiculo");
+        System.out.println("4. Para salir");
+        System.out.println("**************************************");
+        opcion =input.nextInt();
+        System.out.print("\033[H\033[2J");
+        System.out.println("Vehiculos parquedos actualmente: ovl598, afs456, axc966, dad868, dfy868 \n ");
+    switch (opcion){
+
+            case 1:
+
+                System.out.println("Digite la placa del vehiculo para el registro: ");
+                placa = input.next();
+                System.out.print("\033[H\033[2J");
+                if (placa.equals(placa1) || placa.equals(placa2) || placa.equals(placa3) || placa.equals(placa4) || placa.equals(placa5)){
+                    System.out.println("El vehiculo ya esta registrado.");
+                }else{
+                    System.out.println("Digite su nombre:");
+                    nombre = input.next();
+                    System.out.println("Digite marca del vehiculo");
+                    marca = input.next();
+                    System.out.print("\033[H\033[2J");
+                    System.out.println("Se han guardado sus datos para el registro.\n");
+                    System.out.println("Lo sentimos cupo del parqueadero lleno.");
+                }
+            break; 
+            case 2:
+                System.out.println("Digite la placa del vehiculo que desea retirar");
+                placa = input.next();
+                System.out.print("\033[H\033[2J");
+                if (placa.equals(placa1)){
+                    System.out.println("Vehiculo con placas: "+placa1+" Marca "+marca1+" Propiedad de :"+nom1+" Telefono "+tel1+".\n");
+                    System.out.println("Vehiculo retirado exitoxamente.\n");
+                }else{
+                    System.out.println("Vehiculo no registrado.");
+                }
+                if (placa.equals(placa2)){
+                    System.out.println("Vehiculo con placas: "+placa2+" Marca "+marca2+" Propiedad de :"+nom2+" Telefono "+tel2+".\n");
+                    System.out.println("Vehiculo retirado exitoxamente.\n");
+                }
+                if (placa.equals(placa3)){
+                    System.out.println("Vehiculo con placas: "+placa3+" Marca "+marca3+" Propiedad de :"+nom3+" Telefono "+tel3+".\n");
+                    System.out.println("Vehiculo retirado exitoxamente.\n");
+                }
+
+                if (placa.equals(placa4)){
+                    System.out.println("Vehiculo con placas: "+placa4+" Marca "+marca1+" Propiedad de :"+nom4+" Telefono "+tel4+".\n");
+                    System.out.println("Vehiculo retirado exitoxamente.\n");
+                }
+                if (placa.equals(placa5)){
+                    System.out.println("Vehiculo con placas: "+placa5+" Marca "+marca2+" Propiedad de :"+nom5+" Telefono "+tel5+".\n");
+                    System.out.println("Vehiculo retirado exitoxamente.\n");
+                }
+                break;
+            case 3:
+            System.out.println("Digite la placa del vehiculo que desea retirar");
+            placa = input.next();
+            if (placa.equals(placa1)){
+                System.out.println("Vehiculo con placas: "+placa1+" Marca "+marca1+" Propiedad de :"+nom1+" Telefono "+tel1+".\n");
+            }else {
+                System.out.println("Vehiculo no registrado.");
+            }
+            if (placa.equals(placa2)){
+                System.out.println("Vehiculo con placas: "+placa2+" Marca "+marca2+" Propiedad de :"+nom2+" Telefono "+tel2+".\n");
+              
+            }
+            if (placa.equals(placa3)){
+                System.out.println("Vehiculo con placas: "+placa3+" Marca "+marca3+" Propiedad de :"+nom3+" Telefono "+tel3+".\n");
+                
+            }
+
+            if (placa.equals(placa4)){
+                System.out.println("Vehiculo con placas: "+placa4+" Marca "+marca1+" Propiedad de :"+nom4+" Telefono "+tel4+".\n");
+                
+            }
+            if (placa.equals(placa5)){
+                System.out.println("Vehiculo con placas: "+placa5+" Marca "+marca2+" Propiedad de :"+nom5+" Telefono "+tel5+".\n");            
+            }
+            break;
+            }
+        }while(opcion != 4);
+    }
+}
+
+        </p><br>
+        
+        <a href="Talleres.html">Regresar</a>
+    </div>
+
+
+
+    <div class="contenedor">
+        
+        <p class="parrafo">8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+        <p class="parrafo">Solucion:</p>
+        package com.taller.ciclos;
+
+        public class App {
+        
+            static private String usuario;
+            
+        
+        
+            public static void main( String[] args ){
+                 Escuela escuela = new Escuela(usuario);
+                 escuela.Mostrar(usuario);
+            }
+        }
+<br><br>    
+package com.taller.ciclos;
+import java.util.Scanner;
+
+public class Escuela {
+    
+    private String usuario;
+    Integer opcion;
+    private String usu1= "";
+    private String usu2= "";
+    private String usu3= "";
+    private String usu4= "";
+    private String usu5= "";
+    private String usu6= "";
+    private String usu7= "";
+    private String usu8= "";
+    String presentado= "Prueba presentada";
+    String noPresentado="Prueba no presentada";
+    String aprobado = "Aprobado.";
+    String noAprobado ="No aprobado.";
+
+    static Scanner input = new Scanner(System.in);
+    
+    public Escuela(String usuario) {
+        this.usuario = usuario;
+    }
+  
+
+    /**
+     * @return String return the usurio
+     */
+    public String getUsuario() {
+        return usuario;
+    }
+    /**
+     * @param usurio the usurio to set
+     */
+    public void setUsurio(String usuario) {
+        this.usuario = usuario;
+    }
+
+  public void Mostrar(String usuario){
+
+    do{ 
+        System.out.println("*** Escuela automovilistica El Maestro ***");
+        System.out.println("Elija una opcion: ");
+        System.out.println("1. Registrar de usuarios ");
+        System.out.println("2. Consultar usuarios que presentaron la prueba.");
+        System.out.println("3. Ver resultados de la prueba.");
+        System.out.println("4. Para salir");
+        System.out.println("**********************************************");
+        opcion = input.nextInt();
+        System.out.print("\033[H\033[2J");
+
+        switch (opcion) {
+            case 1:
+                System.out.println("***Registro maximo de 8 usuarios****");
+                System.out.println("Digite el nombre del usuario 1:");
+                usu1 = input.next();
+                System.out.println("Digite el nombre del usuario 2:");
+                usu2 = input.next();
+                System.out.println("Digite el nombre del usuario 3:");
+                usu3 = input.next();
+                System.out.println("Digite el nombre del usuario 4:");
+                usu4 = input.next();
+                System.out.println("Digite el nombre del usuario 5:");
+                usu5 = input.next();
+                System.out.println("Digite el nombre del usuario 6:");
+                usu6 = input.next();
+                System.out.println("Digite el nombre del usuario 7:");
+                usu7 = input.next();
+                System.out.println("Digite el nombre del usuario 8:");
+                usu8 = input.next();
+                System.out.print("\033[H\033[2J");
+                System.out.println("Limite de usuario completo.\n ");
+            break;
+            case 2:
+                System.out.println("Digite el nombre del usuario que desea consultar");
+                usuario = input.next();
+                if(usuario.equals(usu1)){
+                    System.out.println("Usuario: "+usu1+ " Estado de la prueba: "+noPresentado+"\n ");
+                }
+                if(usuario.equals(usu2)){
+                    System.out.println("Usuario: "+usu2+ " Estado de la prueba: "+presentado+"\n ");
+                }
+                if(usuario.equals(usu3)){
+                    System.out.println("Usuario: "+usu3+ " Estado de la prueba: "+presentado+"\n ");
+                }
+                if(usuario.equals(usu4)){
+                    System.out.println("Usuario: "+usu4+ " Estado de la prueba: "+noPresentado+"\n ");
+                }
+                if(usuario.equals(usu5)){
+                    System.out.println("Usuario: "+usu5+ " Estado de la prueba: "+presentado+"\n ");
+                }
+                if(usuario.equals(usu6)){
+                    System.out.println("Usuario: "+usu6+ " Estado de la prueba: "+presentado+"\n ");
+                }
+                if(usuario.equals(usu7)){
+                    System.out.println("Usuario: "+usu7+ " Estado de la prueba: "+noPresentado+"\n ");
+                }
+                if(usuario.equals(usu8)){
+                    System.out.println("Usuario: "+usu8+ "Estado de la prueba: "+presentado+"\n ");
+                }
+            break;
+            case 3:
+            System.out.println("Digite el nombre del usuario que desea consultar");
+            usuario = input.next();
+            if(usuario.equals(usu1)){
+                System.out.println("Usuario: "+usu1+ " Estado de la prueba: "+noAprobado+"\n ");
+            }
+            if(usuario.equals(usu2)){
+                System.out.println("Usuario: "+usu2+ " Estado de la prueba: "+aprobado+"\n ");
+            }
+            if(usuario.equals(usu3)){
+                System.out.println("Usuario: "+usu3+ " Estado de la prueba: "+aprobado+"\n ");
+            }
+            if(usuario.equals(usu4)){
+                System.out.println("Usuario: "+usu4+ " Estado de la prueba: "+noAprobado+"\n ");
+            }
+            if(usuario.equals(usu5)){
+                System.out.println("Usuario: "+usu5+ " Estado de la prueba: "+aprobado+"\n ");
+            }
+            if(usuario.equals(usu6)){
+                System.out.println("Usuario: "+usu6+ " Estado de la prueba: "+aprobado+"\n ");
+            }
+            if(usuario.equals(usu7)){
+                System.out.println("Usuario: "+usu7+ " Estado de la prueba: "+noAprobado+"\n ");
+            }
+            if(usuario.equals(usu8)){
+                System.out.println("Usuario: "+usu8+ " Estado de la prueba: "+aprobado+"\n ");
+            }
+              break;  
+            }
+        }while(opcion !=4);
+    }
+}
+
+        </p><br>
+        
+        <a href="Talleres.html">Regresar</a>
+    </div>
+</body>
+</html>
